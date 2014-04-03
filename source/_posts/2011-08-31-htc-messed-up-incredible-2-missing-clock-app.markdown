@@ -1,0 +1,30 @@
+---
+layout: post
+status: publish
+published: true
+title: HTC messed up (Incredible 2, missing Clock app)
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 299
+wordpress_url: http://trevoke.net/blog/?p=299
+date: 2011-08-31 14:33:09.000000000 -04:00
+categories:
+- Uncategorized
+tags:
+- android
+- htc
+- incredible 2
+- phone
+- mobile
+comments: []
+---
+I have a Droid Incredible 2 - and I'm really enjoying it. I got an OTA update to 2.3 right about the time I was going to root it, so I thought, what the heck, I'll get Gingerbread. It's all I really wanted anyway.
+
+Last week, at some point, the clock app disappeared. I noticed because the alarm stopped ringing. It didn't really bother me, because sometimes I sleep through it -- but then I checked and it's ... not there. I mean, in "Manage Apps" it's there, with a size of 0, but it's not the app drawer.
+
+... There's a bug that causes the clock app to randomly appear / disappear. And it's been happening for about two months, based on the research I've been doing.
+Someone on a forum said that if this happened on an iPhone, it'd be in all the newspapers. They're right. iPhones are held to a different standard -- and the standard should be the same. If Android wants to be taken seriously, then it's time to get some real development going behind it.
+
+And don't give me that crap about a single platform versus many platforms (different phones, etc). You're a distributor, you know your hardware. How come other ROMs are stable on YOUR hardware? Hmmmm ?

@@ -1,0 +1,23 @@
+---
+layout: post
+status: publish
+published: true
+title: Ruby HL7
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 34
+wordpress_url: http://trevoke.net/blog/2008/12/17/ruby-hl7/
+date: 2008-12-17 09:15:20.000000000 -05:00
+categories:
+- ruby
+- medical
+tags:
+- ruby
+- medical
+- hl7
+comments: []
+---
+And right on schedule on this blog, behind <a title="Ruby DICOM" href="http://trevoke.net/blog/2008/12/16/ruby-dicom/" target="_blank">Ruby DICOM</a>, here comes<a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank"> </a><a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank">Ruby-HL7</a>!
+Gots to love the Ruby. A lot of potential.. And to think they're revamping the language.

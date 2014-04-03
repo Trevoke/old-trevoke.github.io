@@ -1,0 +1,29 @@
+---
+layout: post
+status: publish
+published: true
+title: Teaching kusanku to sankyu
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 222
+wordpress_url: http://trevoke.net/blog/?p=222
+date: 2010-03-11 09:42:42.000000000 -05:00
+categories:
+- Martial Arts
+- teaching
+tags:
+- teaching
+- isshinryu
+- kusanku
+comments: []
+---
+Last night, after some kicking drills and sparring, sensei entrusted the adult class to me and told us to work on kusanku. The 'adult class' yesterday consisted of three sankyu.
+I looked at the clock, rubbed my hands together and said "Alright everyone, we have twenty-five minutes' worth of kusanku. Let me know if you have questions or doubts."
+When we had finished walking through it, I looked at the clock. I'd spent twenty minutes on the form, and they all looked happy. I don't think I really stood still for more than a few seconds at a time during those twenty minutes.
+It reminded me of the first time I led the adult class, and I spent twenty-five minutes on seisan kata. I distinctly remember that it did not go quite as smoothly. It is usually hard to convince ranks under shodan that seisan is a very important, subtle kata, full of knowledge to be examined ;-) It's a realization they must come to by themselves.
+
+My favorite moment of those twenty minutes (besides the part where they all had a big smile, at the end), was one of the signature kusanku moves (koza dachi, right hand shuto to the throat, left hand behind your head like in seiuchin). I knelt by each one, adjusted the position of their rear foot with my hands, then stood up and watched their faces light up as the lesson sank in - in the proper stance, the legs and hips are looser, and thus the hips can turn more and still be more comfortable!
+
+I _like_ teaching.

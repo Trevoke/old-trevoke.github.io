@@ -1,0 +1,29 @@
+---
+layout: page
+status: publish
+published: true
+title: About
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 2
+date: 2008-02-12 18:56:35.000000000 -05:00
+categories:
+- Uncategorized
+tags: []
+comments: []
+---
+In no particular order:
+
+I am a programmer, with a preference for Ruby.
+
+I am a practicing, studying, teaching nidan in isshinryu karate.
+
+I also hold a rank of shodan in muso shinden ryu iaido, and have studied other styles such as jigen ryu, omori ryu, okuiai.
+
+I studied Ch'iang Shan Pa Kua Chang for a little over a year.
+
+And these are only the ones I've formally studied.
+
+As far as physical, mental and spiritual development, I am a strong believer that there's only one mountain, and many paths up. Of course, no one is holding you back from making your own path - but remember that it's a ton more work.

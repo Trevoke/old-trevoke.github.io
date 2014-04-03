@@ -1,0 +1,19 @@
+---
+layout: post
+status: publish
+published: true
+title: stances
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 70
+wordpress_url: http://trevoke.net/blog/2009/01/27/stances/
+date: 2009-01-27 00:47:39.000000000 -05:00
+categories:
+- Martial Arts
+tags:
+- stances
+comments: []
+---
+Tonight we had training on stances. It came about more or less accidentally - proper stances are -hard- !! But I am now flexible enough hip-wise to get there.. Now to train my leg muscles, mostly the quads, to follow suit...

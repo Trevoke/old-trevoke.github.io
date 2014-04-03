@@ -1,0 +1,28 @@
+---
+layout: post
+status: publish
+published: true
+title: Relaxing the upper body.. aka "drop your shoulders"
+author: Trevoke
+author_login: Trevoke
+author_email: trevoke@gmail.com
+author_url: http://trevoke.net
+wordpress_id: 76
+wordpress_url: http://trevoke.net/blog/?p=76
+date: 2009-02-24 15:33:42.000000000 -05:00
+categories:
+- alignment
+- Martial Arts
+tags:
+- Martial Arts
+- upper body
+- alignment
+comments: []
+---
+A friend of mine wrote about shoulder relaxation.. Apparently we both had the same mental block, but he solved it first - shoulder relaxation (and by extension, all relaxation) can be done up/down and ... forward/back!
+
+At first I didn't think I had that issue, my western mind automatically went "Nah, I don't have that issue, my shoulders are nice and straight!" .. And then training kicked in and the answer came : "Well, maybe they're not supposed to be straight!"
+So, I let my shoulders round forward a little, which required some spinal and pelvic adjustments.. But the result is that I suddenly 'stopped feeling' my shoulders and upper back.
+For my friend, who is more advanced than I am, the effect was more drastic, and he became aware quickly of more changes, like his arms being properly connected to the body, and feeling better rooted in spite of not having his legs bent as much.
+I'm still playing with the feeling, the muscles around my spine don't know what to do with this weight, I think.. I've got to work on this some more ;-)
+Still, this is a good discovery.
