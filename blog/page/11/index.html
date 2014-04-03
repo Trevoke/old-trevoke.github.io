@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="Whoo! I haven&rsquo;t done a post that long in a while! Also makes me think I should get a wordpress plugin for some &lsquo;code&rsquo; tags.. I put &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/page/11">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/04/how-to-delete-all-files-older-than-a-day-recursively-in-a-directory-and-its-subdirectories/">How to Delete All Files Older Than a Day Recursively in a Directory and Its Subdirectories</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-04T14:20:45-05:00" pubdate data-updated="true">Nov 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Whoo! I haven&rsquo;t done a post that long in a while! Also makes me think I should get a wordpress plugin for some &lsquo;code&rsquo; tags..</p>
+
+<p>I put &lsquo;activerecord&rsquo; in there to take advantage of the &lsquo;24.hours.ago&rsquo; notation, which makes life much easier. The cost is a little less than 2 seconds to load the library, so I think it&rsquo;s worth it. It runs as a daily job before backup to tape, to clear old backups from the directory tree.</p>
+
+<p>[sourcecode language=&lsquo;ruby&rsquo;]require &lsquo;activerecord&rsquo;</p>
+
+<p>def delete_recursively(in_here)
+  Dir.chdir(in_here)
+  Dir.glob(&lsquo;*&rsquo;) do |filename|</p>
+
+<pre><code>if File.directory?(filename)
+  delete_recursively(filename)
+  else
+    if File.mtime(filename) &gt; 24.hours.ago
+    File.delete(filename)
+  end
+end
+</code></pre>
+
+<p>  end
+Dir.chdir(&lsquo;..&rsquo;)
+end</p>
+
+<p>delete_recursively(&ldquo;your/path/here&rdquo;)[/sourcecode]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/04/first-entry-from-blackberry/">First Entry From Blackberry</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-04T10:31:52-05:00" pubdate data-updated="true">Nov 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This blog may yet come alive! I&rsquo;ve figured out how to post to this from my Blackberry :) I use an app called bbmetablog (google for &lsquo;bbmetablog opencod&rsquo;), currently version 1.2.2 . I had a bit of an issue getting xmlrpc line set up propery, until I changed their default &lsquo;xml-rpc?openagent&rsquo; to &lsquo;xmlrpc.php&rsquo; .. And I&rsquo;m live!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/15/kali-sticks/">Kali Sticks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-15T08:13:39-04:00" pubdate data-updated="true">May 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday we had a small class, so we were able to each work on what we needed. I, hopefully, now have the full chatan yara no sai form, so I just need to work it..</p>
+
+<p>We did some kali stick work. The yellow and blue belt had never seen those drills before so we started with a simple high-low-high, but we did try for a little bit the sinawali drills, specifically heaven, because that one&rsquo;s fun :) Kali sticks are very good to work follow-through, speed and flow, and god knows I need that.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/01/testing-for-purple/">Testing for Purple</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-01T15:07:26-04:00" pubdate data-updated="true">May 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Monday and yesterday, two blue belts were to test for purple. They went through their calisthenics and basics; I did not see their forms on Monday, but I did see them on Wednesday. They were bad enough sensei wanted to see them again, that much I understood, but not sure how bad until I saw them both.</p>
+
+<p>Neither of them broke a sweat until fighting, not for the 100 jumping jacks, not for the 60 push-ups, not for the multiple kick combinations. They did get out of breath when doing all the forms in a row, at least&hellip;
+Neither displayed the spirit we expected from a blue belt.. Let alone from someone testing. A test is supposed to be the hardest thing you&rsquo;ve done to date and you&rsquo;re supposed to work as hard as you can.. And that&rsquo;s usually noticeable. Further, their forms weren&rsquo;t even up to blue belt level. Chances are they did not practice outside the dojo.. Or even think about the art at all. While some people do martial arts leisurely, you should either expect to stop progressing or realize that work needs to go into it.</p>
+
+<p>One of the blue belts seemed OK with the postponement and stayed to speak with sensei.. The other one pretty much stormed out.. Well, we&rsquo;ll see what happens now.
+You have to TRAIN !</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/17/recommended-books/">Recommended Books</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-17T08:34:15-04:00" pubdate data-updated="true">Apr 17<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ll keep here two lists of books : the ones I recommend reading, and the ones I take off the list, with the reason why.</p>
+
+<p style="text-align: center;"><strong>Recommended Books:</strong></p>
+
+
+<p style="text-align: left;"><span class="sans"><span id="btAsinTitle"><strong>The Bodhisattva Warriors: The Origin, Inner Philosophy, History and Symbolism of the Buddhist Martial Art Within India and China</strong>, by Terence Dukes</span></span></p>
+
+
+<p style="text-align: left;"><strong>Martial Arts Madness</strong>, by Dr. Glenn Morris</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/15/solved-my-left-shoulder-pain/">Solved My Left Shoulder Pain?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-15T11:21:46-04:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Is it a worrying trend that I write mostly about pain in here? :)</p>
+
+<p>Every once in a while, usually while doing a high block with my left arm, I&rsquo;d feel a pain in my left shoulder. It felt like a part was rolling over another one.. Muscle over bone, or something like that. It&rsquo;s not pleasant and is the kind of pain that stops your movement quite short and quite abruptly.</p>
+
+<p>It happened yesterday while doing an uppercut (or, you know, punch to under the jaw/to the throat/etc). I realized my body alignment was wrong and my left elbow wasn&rsquo;t kept in properly. As soon as I fix that, I think, I&rsquo;ll feel a lot better about the whole thing :)</p>
+
+<p>This of course begs the question.. What else am I not aligning properly, but maybe not quite wrong enough to get pain from it?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/08/hurt-my-mid-back/">Hurt My Mid-back&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-08T10:22:17-04:00" pubdate data-updated="true">Apr 8<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>    I don&rsquo;t know how I did it, but at some point during my empty hand class, I hurt my back. Think of a line going horizontally across the middle of the back (under the shoulderblades), and you have it. I didn&rsquo;t stay for weapons past my bo class and went home. I was OK during my sword class, which means either I wasn&rsquo;t paying attention, or I wasn&rsquo;t using those muscles..</p>
+
+<p>It got worse in the evening, to the point where I was walking slowly, and I couldn&rsquo;t help but play with it a little &mdash; forced to use momentum generated by other muscles in order not to feel pain. Sunday was better but still careful, and Monday I considered not going to work but I felt good enough not to let it stop me. Training on Monday night made it pretty much all go away.</p>
+
+<p>It&rsquo;s very interesting to be in pain, when it&rsquo;s not constant and excruciating (because that just sucks), you can explore better your body&rsquo;s workings.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/03/24/found-the-solar-plexus-yet/">Found the Solar Plexus Yet?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-24T23:12:54-04:00" pubdate data-updated="true">Mar 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We have a move in a form that requires holding a hand in front of the solar plexus. One of the kids was holding his hand a little low, so I mentioned it to him.. He start hitting his chest a few times with his hand, so I laugh. &ldquo;Think you got it?&rdquo; He does it a few more times and starts coughing. &ldquo;Ah, now you got it.&rdquo;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/03/21/so-you-want-to-spar/">So, You Want to Spar?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-21T15:27:53-04:00" pubdate data-updated="true">Mar 21<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p> Sparring can be one of the many reasons one wants to join a martial arts school, sometimes even their only interest. Unless you join a school based on street defense, you may not do as much as you&rsquo;d like. Besides, the insurances and legality issues being what they are, usually you are limited to sparring gear which lets you mostly throw punches and kicks.</p>
+
+<p>The teacher of a traditional school probably won&rsquo;t let you spar until after you get a belt or two, because you need to break in your body and the techniques you are learning &mdash; besides, you don&rsquo;t have enough control to know when to stop your strikes, so if your opponent fails to block, you could hurt him quite a bit. It&rsquo;s more dangerous to spar a beginner than an advanced student :) Sparring will teach you footwork and will get you used to seeing strikes come at you. It&rsquo;ll also get you used to working out combinations of strikes, pacing yourself, and speed of action.</p>
+
+<p>What is more important to value properly, in my opinion, is the study of applications from forms, or the study of self-defense moves (whichever it is called in your school). There, you learn to apply the defense against a helpful opponent, slow at first, then increasing the speed, then increasing power, then with a less helpful opponent. This is when you get a chance to really program yourself and get your neural connections solidly prepared, as well as use your body to manipulate the opponent&rsquo;s body.</p>
+
+<p>Of course, sparring is very important as well, and a school that doesn&rsquo;t do any of it had better have other exercises to compensate for the values taught during sparring.</p>
+
+<p>In the end, it&rsquo;s importan to remember that sparring isn&rsquo;t about beating up the other guy, much less about winning. Rather, it is about working with your partner to improve your technique as well as his, in a positive and safe environment where you can prepare for something you probably hope you&rsquo;ll never have to use.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/03/20/which-martial-arts-school-is-right-for-you/">Which Martial Arts School Is Right for You?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-20T06:34:55-04:00" pubdate data-updated="true">Mar 20<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, you&rsquo;ve decided to start taking a martial arts class. Good for you!</p>
+
+<p>Why do you want to join? Is it to fight, to learn to defend yourself, to develop self-discipline, to learn kata (&lsquo;forms&rsquo;), for health reasons? All of the above?</p>
+
+<p>For the purpose of this article (if nothing else), I will make a differentiation between a fighting style and a martial art. In a fighting style, you are learning to fight, and that is it. Martial arts involve other lessons.</p>
+
+<p>There are many martial arts. Karate is but one genre, and within that genre there are many styles, just like chuan fa (usually mistakenly called kung fu). They all have the same goal, but the path is different. Another important difference is that some fighting styles/martial arts are better fit for a body type than another. While you will be limited by what is in your area, that is something you will need to keep in mind. It is possible to study any style without great handicap, but you may have to work a little harder. With any luck, the teacher at the school will be knowledgeable enough to tell you this in greater detail.</p>
+
+<p>This brings me to the next important point &ndash; the teacher. It is in fact more important than the style you choose to study, because a teacher makes or breaks a school (and his/her students). Do talk to the teacher beforehand, and pay particular attention to anything that sounds like the teacher has an agenda other than to teach you as best as he/she can. Maybe the teacher needs to prove their strength or skill. Maybe the teacher doesn&rsquo;t like men, or women. Maybe the teacher just wants your money..
+Ask for a trial class, if it is not specifically offered. Ask which is a good day to come &ndash; some schools pick days of the week to practice certain things, and watching a whole hour of people in gear sparring may not be the best thing if you are looking for a school that teaches forms &ndash; even if said school excels at teaching forms, and you came for the wrong trial class.</p>
+
+<p>When you are there, pay attention to the interaction between students, pay attention to the top students&#8217; behavior, and pay attention to the teacher&rsquo;s words. Watching students will tell you how they feel about the school. Watching the top student is usually a good indicator of what is likely to happen to you if you stay with the teacher long enough. Watching the intermediate students will tell you what is likely to happen in a year, or two, or five &ndash; and that&rsquo;s important too! Watching the teacher will tell you what you&rsquo;re in for, even though all teachers are likely to be extra-nice if a new potential student shows up. Pay particular attention to the atmosphere &ndash; if you will be training there, you will most likely be there for a long, long time, and you definitely want a healthy atmosphere.</p>
+
+<p>Last but not least for this small introduction, YOUR responsibility!
+Once you have chosen a teacher and a school, you MUST enter as a <em>tabula rasa</em>, a blank slate. Whatever you know, or think you know, you must discard it so as to learn exactly what you are taught there.
+If you can&rsquo;t make it to a class, do call &ndash; it is polite, and your teacher won&rsquo;t worry about you.
+Also, and this comes more naturally with practice, focus your mind only on martial arts when you are there. It makes your practice time purer, it improves the atmosphere of the dojo, and it helps your mental discipline.</p>
+
+<p>I hope this helps &ndash; good luck in your training!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/12/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/10/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

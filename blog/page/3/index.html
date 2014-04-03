@@ -1,0 +1,801 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="So, you can&rsquo;t install gettext?
+Here&rsquo;s a hack to get you past it.
+do your
+$ emerge &mdash;oneshot gettext When it&rsquo;s all unpacked, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/page/3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/08/gentoo-prefix-on-lion-gettext-problem/">Gentoo Prefix on Lion: Gettext Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-08T23:04:18-04:00" pubdate data-updated="true">Aug 8<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, you can&rsquo;t install gettext?
+Here&rsquo;s a hack to get you past it.
+do your
+$ emerge &mdash;oneshot gettext</p>
+
+<p>When it&rsquo;s all unpacked, Ctrl+z (this will pause the job), go to the work directory, something like this:
+/Users/you/Gentoo/var/tmp/portage/sys-devel/gettext-0.18.1.1-r2/work/gettext-0.18.1.1</p>
+
+<p>From there, go in here:
+cd gettext-tools/gnulib-lib
+and in here..</p>
+
+<p>edit &ldquo;stpncpy.c&rdquo; with your favorite text editor, find
+&ldquo;# define <strong>stpncpy stpncpy&rdquo;
+And add // at the beginning of the line, like so:
+&ldquo;//# define </strong>stpncpy stpncpy&rdquo;</p>
+
+<p>Save and quit, then type &ldquo;fg 1&rdquo; and return, this will resume the job.</p>
+
+<p>This hack bypasses the stpncpy problem. Someone more serious than me needs to create a new ebuild for this though&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/04/matt-damons-speech-at-the-save-our-schools-rally/">Matt Damon&#8217;s Speech at the Save Our Schools Rally</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-04T03:24:09-04:00" pubdate data-updated="true">Aug 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I flew overnight from Vancouver to be with you today. I landed in New York a few hours ago and caught a flight down here because I needed to tell you all in person that I think you’re awesome.
+I was raised by a teacher. My mother is a professor of early childhood education. And from the time I went to kindergarten through my senior year in high school, I went to public schools. I wouldn’t trade that education and experience for anything.
+I had incredible teachers. As I look at my life today, the things I value most about myself — my imagination, my love of acting, my passion for writing, my love of learning, my curiosity — all come from how I was parented and taught.
+And none of these qualities that I’ve just mentioned — none of these qualities that I prize so deeply, that have brought me so much joy, that have brought me so much professional success — none of these qualities that make me who I am &hellip; can be tested.
+I said before that I had incredible teachers. And that’s true. But it’s more than that. My teachers were EMPOWERED to teach me. Their time wasn’t taken up with a bunch of test prep — this silly drill and kill nonsense that any serious person knows doesn’t promote real learning. No, my teachers were free to approach me and every other kid in that classroom like an individual puzzle. They took so much care in figuring out who we were and how to best make the lessons resonate with each of us. They were empowered to unlock our potential. They were allowed to be teachers.
+Now don’t get me wrong. I did have a brush with standardized tests at one point. I remember because my mom went to the principal’s office and said, ‘My kid ain’t taking that. It’s stupid, it won’t tell you anything and it’ll just make him nervous.’ That was in the ’70s when you could talk like that.
+I shudder to think that these tests are being used today to control where funding goes.
+I don’t know where I would be today if my teachers’ job security was based on how I performed on some standardized test. If their very survival as teachers was based on whether I actually fell in love with the process of learning but rather if I could fill in the right bubble on a test. If they had to spend most of their time desperately drilling us and less time encouraging creativity and original ideas; less time knowing who we were, seeing our strengths and helping us realize our talents.
+I honestly don’t know where I’d be today if that was the type of education I had. I sure as hell wouldn’t be here. I do know that.
+This has been a horrible decade for teachers. I can’t imagine how demoralized you must feel. But I came here today to deliver an important message to you: As I get older, I appreciate more and more the teachers that I had growing up. And I’m not alone. There are millions of people just like me.
+So the next time you’re feeling down, or exhausted, or unappreciated, or at the end of your rope; the next time you turn on the TV and see yourself called “overpaid;” the next time you encounter some simple-minded, punitive policy that’s been driven into your life by some corporate reformer who has literally never taught anyone anything. &hellip; Please know that there are millions of us behind you. You have an army of regular people standing right behind you, and our appreciation for what you do is so deeply felt. We love you, we thank you and we will always have your back.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/07/10/linventaire-jacques-prevert/">L&#8217;inventaire - Jacques Prevert</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-10T08:01:19-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Une pierre
+deux maisons
+trois ruines
+quatre fossoyeurs
+un jardin
+des fleurs</p>
+
+<p>et un raton laveur</p>
+
+<p>une douzaine d&#8217;huitres un citron un pain
+un rayon de soleil
+une lame de fond
+six musiciens
+une porte avec son paillasson
+un monsieur décoré de la légion d&#8217;honneur</p>
+
+<p>et un autre raton laveur</p>
+
+<p>un sculpteur qui sculpte des Napoléon
+la fleur qu&#8217;on appelle souci
+deux amoureux sur un grand lit
+un receveur des contributions
+une chaise trois dindons
+un ecclésiastique un furoncle
+une guepe
+un rein flottant
+une écurie de courses
+un fils indigne deux frères dominicains</p>
+
+<pre><code>trois sauterelles un strapontin
+</code></pre>
+
+<p>deux filles de joie un oncle Cyprien
+une Mater dolorosa trois papas gateaux deux chèvres de</p>
+
+<pre><code>Monsieur Seguin
+</code></pre>
+
+<p>un talon Louis XV
+un fauteuil Louis XVI
+un buffet Henri II deux buffets Henri III trois buffets</p>
+
+<pre><code>Henri IV
+</code></pre>
+
+<p>un tiroir dépareillé
+une pelote de ficelle trois épingles de sureté un monsieur</p>
+
+<pre><code>agé
+</code></pre>
+
+<p>une Victoire de Samothrace un comptable deux aides-</p>
+
+<pre><code>comptables un homme du monde deux chirurgiens 
+trois végétariens
+</code></pre>
+
+<p>un cannibale
+une expédition coloniale un cheval entier une demi-pinte</p>
+
+<pre><code>de bon sang une mouche tsé-tsé
+</code></pre>
+
+<p>un homard à l&#8217;américaine un jardin à la francaise
+deux pommes à l&#8217;anglaise
+un face-à-main un valet de pied un orphelin un poumon</p>
+
+<pre><code>d'acier
+</code></pre>
+
+<p>un jour de gloire
+une semaine de bonté
+un mois de Marie
+une année terrible
+une minute de silence
+une seconde d&#8217;inattention
+et&hellip;</p>
+
+<p>cinq ou six ratons laveurs</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/05/10/att-a-ten-year-customer-says-goodbye/">AT&T: A Ten-year Customer Says Goodbye</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-10T22:13:40-04:00" pubdate data-updated="true">May 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I just moved into a new apartment where the AT&amp;T reception is, well, atrocious. Still, I like AT&amp;T, so I&rsquo;m dragging my feet to switch to Verizon (or something else).</p>
+
+<p>Today, I spoke in live chat to some AT&amp;T employee. I believe the name was Monica Garnett but I could be wrong &mdash; and it probably doesn&rsquo;t matter. My issue was that I didn&rsquo;t seem to have a mailbox for my phone number. She says my data plan is unsupported for smart phones.</p>
+
+<p>&hellip; Wait, what? I&rsquo;ve been using this data plan for over a year with this phone. Maybe I never got voicemail, but who cares! It WORKED. I had unlimited text and unlimited data. Now, yes, I know, this plan had been removed and AT&amp;T wasn&rsquo;t offering it anymore, but I am an existing customer, I get the perk of keeping that, right?</p>
+
+<p>&hellip; No. I was told I could switch to their 200Mb/month or 2Gb/month plan, which I did, but what I wasn&rsquo;t told is that THESE PLANS DO NOT INCLUDE MESSAGING.</p>
+
+<p>Now, I want to fix this. I got screwed by a company, big whoop, whatever, I&rsquo;ll just limit myself a little. THE WEBSITE DOES NOT GIVE ME REASONABLE OPTIONS. I can get unlimited text, or unlimited text with any mobile-to-mobile calling, or 1000 texts.</p>
+
+<p>I could pay $15 for 200 megs and $10 for 1000 texts, and then I&rsquo;d have $25 &mdash; which is, $5 less than unlimited data and unlimited texts. Huh. NO.</p>
+
+<p>I could pay $25 for 2Gb and $10 for 1000 texts, or $20 for unlimited texts. So .. $35 or $45? NO.</p>
+
+<p>Seriously? So I have to pay MORE now to have LESS than I used to have? Well, goodbye, AT&amp;T. Guess who&rsquo;s going to go say hi to another phone service provider tomorrow?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/02/05/scrivener-for-linux/">Scrivener for Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-05T14:09:34-05:00" pubdate data-updated="true">Feb 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a title="Scrivener" href="http://www.literatureandlatte.com/scrivener.php" target="_blank">Scrivener</a> is a wonderful OSX app for writing basically anything you want (novels, plays, theses, etc). There&rsquo;s a beta out for Windows. As it turns out, they&rsquo;re actually developing it using the Qt toolkit.</p>
+
+<p>The <a href="http://www.literatureandlatte.com/scrivenerforwindows/" target="_blank">Windows Beta</a> runs on WINE, if you do a bit of work. I am getting all my information from a Lifehacker tip, just rewriting it and adding some more information for those who don&rsquo;t know enough.</p>
+
+<ul>
+    <li>Install <a title="WINE Is Not an Emulator" href="http://www.winehq.org/" target="_blank">WINE</a> &#8211; version 1.3.5 or higher.</li>
+    <li>Download <a title="Winetricks" href="http://wiki.winehq.org/winetricks" target="_blank">winetricks</a>.  [code]$ wget http://winetricks.org/winetricks[/code]</li>
+    <li>I also recommend installing the &#8216;cabextract&#8217; tool, as indicated in the previous link.</li>
+    <li>run winetricks and install the following runtime libraries: [code]$ sh winetricks vcrun2008 vcrun6 quartz dotnet20[/code]</li>
+    <li>I did not need to do this, but the link also recommends downloading qsvg.dll and qtsvg.dll and copying them to your ~/.wine/drive_c/windows/system32 directory. I&#8217;m not actually sure where to find these, and installing Scrivener created a qsvg4.dll file.</li>
+    <li>Finally, install and run the Beta.</li>
+</ul>
+
+
+<p>Let me know if you run into any issues following these instructions.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/27/ruby/">Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-27T20:26:14-05:00" pubdate data-updated="true">Jan 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First, <a title="official Ruby site" href="http://www.ruby-lang.org/en/" target="_blank">get Ruby</a>. Install it as explained on the website. Once you&rsquo;re more comfortable with it, in a few weeks, you can check out <a href="http://rvm.beginrescueend.com/" target="_blank">RVM</a>. Not now though &ndash; you&rsquo;d just confuse yourself.</p>
+
+<p>The two important command-line tools are going to be &ldquo;irb&rdquo; and &ldquo;ruby&rdquo;. For development, you will be able to use tools like emacs, vim, Jetbrains Rubymine, or Eclipse. Ruby support is quite widespread.</p>
+
+<p>Create a temporary directory and get cozy inside.</p>
+
+<p>Right off the bat, how would you write a test?
+You would create a file called &ldquo;my_test.rb&rdquo; (It is a good naming convention, &lsquo;something_test.rb&rsquo;).</p>
+
+<p>[ruby]require &lsquo;test/unit&rsquo;
+class MyTest &lt; Test::Unit::TestCase
+def test_addition_is_not_broken
+assert_equal(10, 5+5)
+end
+  def test_addition_is_not_broken_but_i_am</p>
+
+<pre><code>assert_equal(10, 5)
+</code></pre>
+
+<p>  end
+end
+[/ruby]</p>
+
+<p>A couple of things of note:</p>
+
+<ul>
+    <li>&#8220;require&#8221; is how you load external libraries.</li>
+    <li>The test class name (&#8220;SomethingTest&#8221;) is a convention. Follow it and avoid pain.</li>
+    <li>The test method name also follows a convention : &#8220;test_&#8221; . Again, follow it and avoid pain.</li>
+    <li>Indentation is two spaces by convention. Follow, Avoid.</li>
+    <li>Parentheses for method calls are optional, but it&#8217;s good form to put parentheses if there are two or more arguments to a method. Also, parentheses will save you if the parser has issues parsing. Remember that.</li>
+</ul>
+
+
+<p>To run that, you would simply call &ldquo;ruby my_test.rb&rdquo; and see one test succeed and one test fail.</p>
+
+<p>How would you write a simple program?
+Create a file called &ldquo;myprog.rb&rdquo; and put the following inside:</p>
+
+<p>[ruby]
+def palindromize input
+  input.reverse
+end</p>
+
+<p>puts &quot;Give me something and we&rsquo;ll see if it&rsquo;s a palindrome!&quot;
+input = gets.chomp
+puts palindromize(input)
+[/ruby]</p>
+
+<p>This would be run, like the test, with &ldquo;ruby myprog.rb&rdquo;
+Some things to note:</p>
+
+<ul>
+    <li>&#8220;gets.chomp&#8221; &#8211; Ruby, by default, captures the return key being pressed. Chomp is necessary to remove that special character.</li>
+    <li>Did you notice how I put parentheses around &#8220;palindromize(input)&#8221; ? It&#8217;s so that both the Ruby parser and human readers stay sane when reading the code.</li>
+</ul>
+
+
+<p>Things of note:</p>
+
+<p>Ruby documentation: <a href="http://ruby-doc.org/" target="_blank"><a href="http://ruby-doc.org/">http://ruby-doc.org/</a></a>, <a href="http://ruby-doc.org/core" target="_blank"><a href="http://ruby-doc.org/core">http://ruby-doc.org/core</a></a> &mdash; that will get you started. The documentation is excellent until you get to some arcane features &mdash; so not to worry, for now.</p>
+
+<p>Wanna talk to people? You can go to <a href="http://www.ruby-forum.com/" target="_blank"><a href="http://www.ruby-forum.com/">http://www.ruby-forum.com/</a></a> (Ruby big names, such as David Black, JEG2 and even Matz, the creator of the language) are active there, and everyone is nice. You can also go to the Freenode server on IRC, channel #ruby.</p>
+
+<p>Let me know if you think I could add things to this tutorial or if you have questions!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/27/getting-started-with-a-programming-language/">Getting Started With a Programming Language</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-27T19:38:35-05:00" pubdate data-updated="true">Jan 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hello, and welcome to a blog series about programming languages. The goal is to explain how to get started in a few quick steps : install, write a simple test, write a simple program. Hopefully, just enough information to get you started without getting in your way.</p>
+
+<p>I recommend you try your chops with <a href="http://projecteuler.net" target="_blank"><a href="http://projecteuler.net">http://projecteuler.net</a></a> &ndash; fun algorithm implementation. A good way to learn a programming language.</p>
+
+<p>When talking to people, please remember <a href="http://www.catb.org/~esr/faqs/smart-questions.html" target="_blank">How to Ask Questions the Smart Way</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/18/jetblue-dont-use-them/">JetBlue - Don&#8217;t Use Them (Satisfactory Ending)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-18T10:42:10-05:00" pubdate data-updated="true">Nov 18<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, a friend of mine made a reservation on the same two JetBlue flights as me: 119, JFK-MSY, Nov. 10, 2010, and 120, MSY-JFK, Nov. 14, 2010. So far, so good. We get to JFK, I get my boarding pass swimmingly through one of the machines &ndash; but she gets a message that she needs to talk to someone. So, we do.</p>
+
+<p>Now, let&rsquo;s go back in time a little. My friend, a French citizen and resident, was organizing a large trip. She made her reservations on September 25h, 2010 &ndash; approximately two months before the flight. On October 18th, 2010, her phone died. She was in Canada at the time, without budget to get it repaired or get a new one. She did, however, have easy and unfettered access to the Internet. That&rsquo;s approximately a month after the reservation. The evening before the flight (November 9th, 2010), she was with me, and received an email from JetBlue saying to do check-in automatically from home, like other companies do, and I received one just like it.  I, however, don&rsquo;t believe in printers, so there was no place to print the boarding pass. We therefore did not follow this course of action.</p>
+
+<p>Now that this is out of the way&hellip; We talk to JetBlue employees, who, of course, have their hands bound and are powerless to do anything but tell us the following:</p>
+
+<p>&ldquo;The seat was reserved, but the payment did not go through. The notes on this ticket say that numerous attempts were made to call the person and rectify the situation.&rdquo;</p>
+
+<p>So now, I ask you: really? THREE WHOLE WEEKS WENT BY before her phone died. She never received such a call. If calls were indeed made, did no one notice that the calls were going straight to voicemail? Did no one ponder the fact? How come no one tried to (GASP) send an email?</p>
+
+<p>You know &ndash; I can forgive that. Weakness in the process and workflow. Those can be fixed. No worries. Let&rsquo;s just pay for the ticket now. Right?</p>
+
+<p>WRONG. The seat is available, because reserved for her, but if she wants to board now, it&rsquo;s not the ~$220 that it was then, it is now ~$830. Yes. It&rsquo;s approximately four times as expensive. The choices were for her to take a cab back to my apartment and twiddle her thumbs for four days or for me to pay for her seat. If you think I forgot an option &ndash; I didn&rsquo;t. She could not afford to pay that amount.</p>
+
+<p>Now.. I have just opened a complaint with JetBlue. The result of the complaint will determine whether this post stays up or not, and whether I actively discourage people (my company, my professional network, my friends, and their respective networks) from using JetBlue.</p>
+
+<hr />
+
+<p>Edit: JetBlue answered. Their original response was &ldquo;Oh, sorry you guys screwed up, here&rsquo;s $100 dollars to be nice to you&rdquo;. Well, essentially. It was phrased, of course, politely and a bit differently, but that was the essence.</p>
+
+<p>So I replied and told them in no uncertain terms that it was, indeed, them who fucked up, and gave them a few ideas as to how they could have handled the process differently to avoid the fuck-up. I also told them that I had a worldwide extensive network of social and professional contacts and I would launch a crusade against JetBlue if I didn&rsquo;t get my money back.</p>
+
+<p>&hellip; Yes, I used the word crusade. Yes, I smiled when I wrote that.</p>
+
+<p>A few hours later, I got another message from them refunding the extra cost &ndash; so the seat only cost the original fare instead of 2.5x the price. I&rsquo;m not going to start my crusade. I&rsquo;m pretty happy about that, because I wasn&rsquo;t sure what the karmic debt would be, on their side and mine. And, of course, my friend still has the $100 credit they put on her JetBlue account, since they probably can&rsquo;t take that back.</p>
+
+<p>I&rsquo;m pretty sure we&rsquo;re still going to avoid JetBlue in the future, but as far as what YOU should do.. It&rsquo;s up to you :)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/18/inspiration/">Inspiration</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-18T00:42:42-04:00" pubdate data-updated="true">Oct 18<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The Master had been clear on this point &ndash; the room was treated so the five physical senses would be useless. When Scott asked how, the Master laughed and told him it was magic. Scott had chuckled and shaken his head. Clearly, no point in arguing &ndash; not today&rsquo;s knowledge.</p>
+
+<p>Scott blinked and the test began. He relaxed and extended his consciousness into the ground below him and around him. He knew his limit well: no more than a five-foot radius around him. This meant that by the time he felt the opponent, it would be almost too late. Almost. The Master was sometimes annoyingly cl-</p>
+
+<p>Scott flinched and his hips spun him around, hands flying up in an open, receptive guard position. An intrusion into the five-foot radius. It was almost like a physical blow to his solar plexus. He had felt the opponent. His mind started to rush through all the things he knew to do, and yet within an imperceptible lapse of time, his trained body took over with a quick, soft breath out.</p>
+
+<p>The wind suddenly started to blow, and Scott mentally took notice of it. Wind in a room that had been magically sealed of the physical senses? He wasn&rsquo;t supposed to feel that. The blow he took under the floating ribs on the left side actually lifted him off the ground and sent him flying a few feet before landing hard on his pelvis. His mind had stopped and time hadn&rsquo;t. Fuck. Everything to start again. Actually&hellip; Scott realized he was still connected to Earth and could feel the opponent coming in. He stood up with a quick, hot breath that helped him expand Water and Air towards the other, feeling for the intent to strike, feeling for the movement, for the breath, for life.</p>
+
+<p>Gotcha.</p>
+
+<p>Connected, the movement became absolutely unimportant. For approximately half of one long, endless and yet very short second, everything in the room became one. When Scott&rsquo;s breath ended, the opponent was on the ground, stuck in a joint lock.</p>
+
+<p>“What&rsquo;s with the wind,” Scott asked.</p>
+
+<p>“Oh, just making sure your mind was in the right place.”</p>
+
+<p>“Hardy har-har, Master.”</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/05/11/poulsbo-xorg-1-7-hope-you-like-downgrading/">Poulsbo + Xorg 1.7 = (Hope You Like Downgrading)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-11T15:52:46-04:00" pubdate data-updated="true">May 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you happen to use Gentoo on a Notebook, you may already know this. If not..</p>
+
+<p>At the time of this writing, If you have a Poulsbo video card (another craptastic Intel invention) do <em>not</em> upgrade to xorg-server 1.7. Stay on 1.6.5-r1 or whatever you have. If you upgrade, xorg will just refuse to work for you, and downgrading is kind of a pain.</p>
+
+<p>If you have upgraded already, then here&rsquo;s what to do:</p>
+
+<p><a href="http://bugs.gentoo.org/show_bug.cgi?id=290679#c4">http://bugs.gentoo.org/show_bug.cgi?id=290679#c4</a></p>
+
+<p>After doing this, you&rsquo;ll need to also mask &gt;xorg-server-1.6.5-r1, then re-install the old xorg-server, and finally re-emerge everything you have installed from the category x11-drivers.</p>
+
+<p>Have fun!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Osx | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Add a User to the Wheel Group in OSX]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/02/07/add-a-user-to-the-wheel-group-in-osx/"/>
+    <updated>2013-02-07T10:46:25-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/02/07/add-a-user-to-the-wheel-group-in-osx</id>
+    <content type="html"><![CDATA[<p>Why are these things always so weird? Someday I&rsquo;ll understand why OSX is set up that way. And on that day, I&rsquo;ll probably weep.</p>
+
+<blockquote>$ sudo /usr/bin/dscl . -append /groups/wheel GroupMembership <em>username</em>
+<p style="padding-left: 30px;"></p>
+</blockquote>
+
+
+<p>This was found here : <a href="https://discussions.apple.com/thread/1230828?start=0&amp;amp;tstart=0">https://discussions.apple.com/thread/1230828?start=0&amp;amp;tstart=0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby: Gem Ffi on OSX Mountain Lion 10.8]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/08/21/ruby-gem-ffi-on-osx-mountain-lion-10-8/"/>
+    <updated>2012-08-21T12:38:30-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/08/21/ruby-gem-ffi-on-osx-mountain-lion-10-8</id>
+    <content type="html"><![CDATA[<p>EASY!</p>
+
+<p>sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2</p>
+
+<p>&nbsp;</p>
+
+<p>That&rsquo;s it. You can now install ffi 1.5.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lisp on OSX]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/05/15/lisp-on-osx/"/>
+    <updated>2009-05-15T12:32:05-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/05/15/lisp-on-osx</id>
+    <content type="html"><![CDATA[<p>Just a link to a page.. Got me started with barely any trouble (just make sure you know how to read a .emacs file &ndash; I learned on the fly on his page, it wasn&rsquo;t too tricky).</p>
+
+<p><a href="http://www.david-steuber.com/Lisp/OSX/">http://www.david-steuber.com/Lisp/OSX/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

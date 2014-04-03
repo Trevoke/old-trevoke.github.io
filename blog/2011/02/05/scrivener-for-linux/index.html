@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Scrivener for Linux - Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="Scrivener is a wonderful OSX app for writing basically anything you want (novels, plays, theses, etc). There&rsquo;s a beta out for Windows. As it &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/2011/02/05/scrivener-for-linux">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Scrivener for Linux</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-05T14:09:34-05:00" pubdate data-updated="true">Feb 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a title="Scrivener" href="http://www.literatureandlatte.com/scrivener.php" target="_blank">Scrivener</a> is a wonderful OSX app for writing basically anything you want (novels, plays, theses, etc). There&rsquo;s a beta out for Windows. As it turns out, they&rsquo;re actually developing it using the Qt toolkit.</p>
+
+<p>The <a href="http://www.literatureandlatte.com/scrivenerforwindows/" target="_blank">Windows Beta</a> runs on WINE, if you do a bit of work. I am getting all my information from a Lifehacker tip, just rewriting it and adding some more information for those who don&rsquo;t know enough.</p>
+
+<ul>
+    <li>Install <a title="WINE Is Not an Emulator" href="http://www.winehq.org/" target="_blank">WINE</a> &#8211; version 1.3.5 or higher.</li>
+    <li>Download <a title="Winetricks" href="http://wiki.winehq.org/winetricks" target="_blank">winetricks</a>.  [code]$ wget http://winetricks.org/winetricks[/code]</li>
+    <li>I also recommend installing the &#8216;cabextract&#8217; tool, as indicated in the previous link.</li>
+    <li>run winetricks and install the following runtime libraries: [code]$ sh winetricks vcrun2008 vcrun6 quartz dotnet20[/code]</li>
+    <li>I did not need to do this, but the link also recommends downloading qsvg.dll and qtsvg.dll and copying them to your ~/.wine/drive_c/windows/system32 directory. I&#8217;m not actually sure where to find these, and installing Scrivener created a qsvg4.dll file.</li>
+    <li>Finally, install and run the Beta.</li>
+</ul>
+
+
+<p>Let me know if you run into any issues following these instructions.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Trevoke</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-05T14:09:34-05:00" pubdate data-updated="true">Feb 5<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.trevoke.net/blog/2011/02/05/scrivener-for-linux/" data-via="Trevoke" data-counturl="http://blog.trevoke.net/blog/2011/02/05/scrivener-for-linux/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/01/27/ruby/" title="Previous Post: Ruby">&laquo; Ruby</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/05/10/att-a-ten-year-customer-says-goodbye/" title="Next Post: AT&T: A ten-year customer says goodbye">AT&T: A ten-year customer says goodbye &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

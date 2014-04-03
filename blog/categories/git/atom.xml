@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Git Usage Conventions]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions/"/>
+    <updated>2011-08-30T12:46:12-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions</id>
+    <content type="html"><![CDATA[<p>We&rsquo;ve been using git at work for a greenfield project and, so far, this has worked for us. It could be a useful template to get another team started.
+We have gotten rid of the name &lsquo;master&rsquo;, which is only a convention anyway, and instead are using a few permanent branches:</p>
+
+<ul>
+    <li>production (only stable code which gets deployed to production goes there. The only branch to be merged in, EVER, is 'stable')</li>
+    <li>stable (only stable code which goes to the staging environment goes there. The only branch to be merged in, EVER, is 'integration'))</li>
+    <li>integration (code from other branches goes here - tests should, of course, pass before merging in.)</li>
+</ul>
+
+
+<p>And then we have, of course, other branches for work in progress and other stuff. we&rsquo;ve used these prefixes to help with the naming, and called this the &lsquo;buffers&rsquo; convention (look at the first letters &ndash; BFRS):</p>
+
+<ul>
+    <li>bug_</li>
+    <li>feature_</li>
+    <li>refactor_</li>
+    <li>spike_</li>
+</ul>
+
+
+<div>How have you organized your git repositories?</div>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Databases | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/databases/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix for Windows + Rails 2.2 + Mysql 5.1 = Error]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/09/25/fix-for-windows-rails-2-2-mysql-5-1-error/"/>
+    <updated>2009-09-25T09:58:28-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/09/25/fix-for-windows-rails-2-2-mysql-5-1-error</id>
+    <content type="html"><![CDATA[<p>If you get this error : <em>Mysql::Error: query: not connected:</em> or one just like it, it&rsquo;s because you need an older DLL.. Which I just happen to have found, because I needed to fix this problem too!
+<a href="http://trevoke.net/blog/wp-content/uploads/2009/09/libmySQL.dll">libmySQL.dll</a></p>
+
+<p>Enjoy.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Connecting to Sybase With Rails on Windows XP]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp/"/>
+    <updated>2009-09-11T11:05:24-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp</id>
+    <content type="html"><![CDATA[<p>This is known to work on ASE 12.5.1<span style="font-size: x-small;"><span style="font-family: Verdana;"> &ndash; you&rsquo;re welcome to let me know what else worked, I am particularly curious about later versions of Sybase ASE, such as 15.
+</span></span></p>
+
+<p>Prerequisites:</p>
+
+<ol>
+    <li><a title="Sybase PC Client" href="http://trevoke.net/sybase/pcclient_1252.zip">Sybase PC Client 12.52</a></li>
+    <li><a title="Ruby Sybase connection" href="http://trevoke.net/sybase/ruby-sybase-winxp.zip">The Ruby Sybase  files</a></li>
+    <li>gem install activerecord-sybase-adapter -s http://gems.rubyonrails.org</li>
+</ol>
+
+
+<p>Put the Sybase files in C:\ruby\lib\ruby\site_ruby\1.8\i386-msvcrt .</p>
+
+<p>Copy all the DLLs in %SYBASE%\OCS-12_5\dll and put them in %RUBY%\bin (if you are not familiar with Windows notation, this simply means to go where you installed each of Sybase and Ruby and then go to the proper subdirectory). Why all of them? Well, because I&rsquo;m too lazy to know which ones we -do- need.</p>
+
+<p>Set some environment variables, just to make sure Sybase works fine:</p>
+
+<p>Right-click on My Computer, Properties &gt; Advanced &gt; Environment Variables
+If you have full permissions, go ahead and add those as SYSTEM VARIABLES.. Otherwise, well, only for your user (but aren&rsquo;t you doing this on a server?).</p>
+
+<p>SYBASE=c:\sybase    (where you installed Sybase).</p>
+
+<p>JDBC_HOME=c:\sybase\jConnect-6_0   (again, where you installed Sybase, then the subdirectory).</p>
+
+<p>CLASSPATH=%JDBC_HOME%\classes\jconn3.jar (just make sure that&rsquo;s the right number).</p>
+
+<p>If you&rsquo;re going to create a user on your Sybase server for specific Rails usage, it needs to have SELECT permissions on the following : <strong>sysobjects, syscolumns, systypes, syscomments</strong>.</p>
+
+<p>Edit your %SYBASE%\ini\sql.ini and add the information for your server in there.</p>
+
+<p>Next.. In Rails, the magic will look like this in database.yml :</p>
+
+<p>[code lang=&ldquo;ruby&rdquo;]
+production:
+adapter: sybase
+database: &lt;YOUR_DB_HERE&gt;
+username: &lt;USERNAME&gt;
+password: &lt;PASSWORD&gt;
+host: &lt;NAME_GIVEN_IN_SQL_INI_HERE&gt;
+[/code]</p>
+
+<p>And that should be pretty much it!</p>
+
+<p>Don&rsquo;t forget to edit your model if you&rsquo;re working with legacy data:</p>
+
+<p>[code lang=&ldquo;ruby&rdquo;]
+class Patient &lt; ActiveRecord::Base
+set_table_name &quot;some_odd_name&quot;
+set_primary_key &quot;some_primary_key_column&quot;
+end
+[/code]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby on Rails + Sybase]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/07/31/ruby-on-rails-sybase/"/>
+    <updated>2009-07-31T09:32:27-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/07/31/ruby-on-rails-sybase</id>
+    <content type="html"><![CDATA[<p>Caveat: This adapter may only work with the enterprise edition of Sybase (i.e. Sybase ASE) not with SQLAnywhere (Sybase ASA)</p>
+
+<p>gem install activerecord-sybase-adapter -s <a href="http://gems.rubyonrails.org">http://gems.rubyonrails.org</a></p>
+
+<p>ActiveRecord::Base.establish_connection(
+:adapter => &ldquo;sybase&rdquo;,
+:database => &ldquo;test&rdquo;,
+:host => &ldquo;www.yourdbserver.com&rdquo;,
+:username => &ldquo;kevin&rdquo;,
+:password => &ldquo;test&rdquo;)</p>
+
+<p>Play!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Passwords, Passwords]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/06/09/passwords-passwords/"/>
+    <updated>2009-06-09T18:08:26-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/06/09/passwords-passwords</id>
+    <content type="html"><![CDATA[<p>Default passwords for MSSQL, Sybase, and mySQL:
+, , ,
+That&rsquo;s right.. All three have blank root / sa passwords by default. Talk about secure! That&rsquo;s the kind of knowledge that can come in handy.</p>
+]]></content>
+  </entry>
+  
+</feed>

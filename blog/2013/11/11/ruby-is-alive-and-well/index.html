@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ruby Is Alive and Well - Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="I&rsquo;m back from Rubyconf. Some people say Ruby is dead. We can probably gloss over Zed Shaw&rsquo;s famous rant, since it&rsquo;s from roundabout &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ruby Is Alive and Well</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-11T21:18:17-05:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&rsquo;m back from Rubyconf.</p>
+
+<p>Some people say Ruby is dead. We can probably gloss over Zed Shaw&rsquo;s famous <a title="Zed Shaw's famous rant on the Rails community" href="http://web.archive.org/web/20080103072111/http://www.zedshaw.com/rants/rails_is_a_ghetto.html" target="_blank">rant</a>, since it&rsquo;s from roundabout 2007. My understanding is that the thought came about because of the many new trends in programming languages: first node, then Erlang&rsquo;s comeback and the birth of Elixir. Evented programming, non-blocking IO, all the fancy buzzwords, and everyone craps on Ruby&rsquo;s Global Interpreter Lock.</p>
+
+<p>Given the talks at Rubyconf, Ruby is most likely not dead (and our internal rubylist has an ongoing recent conversation about this if you&rsquo;re curious). There were talks on API design, on fault-tolerant data, on machine-learning, on parallel execution and concurrency, a talk on <a title="Raft: a blog entry with links and stuff" href="http://highscalability.com/blog/2013/8/7/raft-in-search-of-an-understandable-consensus-algorithm.html" target="_blank">Raft</a> (an algorithm to obtain consistency)&hellip;</p>
+
+<p>Ruby&rsquo;s ecosystem is certainly doing a lot of hard work to stay current. If you use Rubinius or JRuby, you can leverage a ridiculously powerful library called <a title="Celluloid" href="https://github.com/celluloid/celluloid" target="_blank">celluloid</a>, plug in <a title="celluloid-io" href="https://github.com/celluloid/celluloid-io" target="_blank">celluloid-io</a> and use <a title="reel webserver" href="https://github.com/celluloid/reel" target="_blank">reel</a>, a webserver based on celluloid-io. Here&rsquo;s the quick blurb on celluloid-io: <em>Celluloid::IO provides an event-driven IO system for building fast, scalable network applications that integrates directly with the Celluloid actor library, making it easy to combine both threaded and evented concepts. Celluloid::IO is ideal for servers which handle large numbers of mostly-idle connections, such as Websocket servers or chat/messaging systems.</em></p>
+
+<p>Oh, and I haven&rsquo;t mentioned the cherry on top of the cake yet! <a title="Opal" href="https://github.com/opal/opal" target="_blank">Opal</a> is a ruby to javascript source-to-source compiler. It also has an implementation of the ruby corelib. It has come a REALLY long way. It passes a large amount of tests from the Ruby specs. You can write jquery with it. You can write CSS with it. In short, it is pretty close to making Ruby into the one-stop-shop for web apps: it allows you to create objects which are representations of what you see on the screen. No more do you have to separate your HTML from your CSS or your Javascript. Check out slide 339 of the <a title="Opal - A new hope slideshow" href="http://www.slideshare.net/fkchang/opal-a-newhope/339" target="_blank">Rubyconf presentation</a> to see an example. And feel free to check out the entire presentation, there&rsquo;s lots of goodies.</p>
+
+<p>In short, Ruby&rsquo;s doing pretty well.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Trevoke</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-11T21:18:17-05:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well/" data-via="Trevoke" data-counturl="http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/15/sparring/" title="Previous Post: Sparring">&laquo; Sparring</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/11/18/the-litany-against-fear/" title="Next Post: The Litany Against Fear">The Litany Against Fear &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

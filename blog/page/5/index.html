@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="One can&rsquo;t actually move a remote branch, but you can copy a branch and delete a branch, so&hellip; Copy oldbranch in repo to newbranch.
+[code] &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/page/5">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/29/git-moving-a-remote-branch/">Git : Moving a Remote Branch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-29T17:08:43-05:00" pubdate data-updated="true">Dec 29<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One can&rsquo;t actually move a remote branch, but you can copy a branch and delete a branch, so&hellip;</p>
+
+<p>Copy oldbranch in repo to newbranch.
+[code]git push {repo} {oldbranch}:heads/{newbranch}[/code]
+Ex: git push origin foobranch:barbranch
+renames foobranch to barbranch</p>
+
+<p>Remove a remote branch: it’s all about the colon:</p>
+
+<p>[code]git push &lt;remote_repo&gt; :heads/&lt;branch&gt;[/code]</p>
+
+<p>Example: git push origin :heads/some-branch removes some-branch from the remote repo (apparently git push origin :some-branch works as well).</p>
+
+<p>This works for removing a tag as well: git push origin :sometag</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/17/random-constrained-permutations-in-ruby/">Random Constrained Permutations in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-17T13:50:20-05:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Look, Ma, these are my baby steps in algorithms!</p>
+
+<p>[ruby]# list is the elements to be permuted</p>
+
+<h1>y is the number of results desired</h1>
+
+<h1>z is the number of elements per result</h1>
+
+<h1>equalizer keeps track of who got used how many times</h1>
+
+<p>def constrained_permutations list, y, z
+  list.uniq! # Never trust the user. We want no repetitions.
+  equalizer = {}
+  list.each { |element| equalizer[element] = 0 }</p>
+
+<p>  results = []
+  # Do this until we get as many results as desired
+  while results.size &lt; y</p>
+
+<pre><code>pool = []
+puts pool
+least_used = equalizer.each_value.min
+# Find how used the least used element was
+while pool.size &amp;lt; z
+  # Do this until we have enough elements in this resultset
+  element = nil
+  while element.nil?
+    # If we run out of &amp;quot;least used elements&amp;quot;, then we need to increment
+    # our definition of &amp;quot;least used&amp;quot; by 1 and keep going.
+    element = list.shuffle.find do |x|
+      !pool.include?(x) &amp;amp;&amp;amp; equalizer[x] == least_used
+    end
+    least_used += 1 if element.nil?
+  end
+  equalizer[element] += 1
+  # This element has now been used one more time.
+  pool &amp;lt;&amp;lt; element
+end
+results &amp;lt;&amp;lt; pool
+</code></pre>
+
+<p>  end
+  return results
+end</p>
+
+<p>constrained_permutations [0,1,2,3,4,5,6], 6, 2
+=&gt; [[4, 0], [1, 3], [2, 5], [6, 0], [2, 5], [3, 6]]
+constrained_permutations [0,1,2,3,4,5,6], 6, 2
+=&gt; [[4, 5], [6, 3], [0, 2], [1, 6], [5, 4], [3, 0]]
+[/ruby]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/17/inter-array-permutations-in-ruby/">Inter-array Permutations in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-17T12:51:06-05:00" pubdate data-updated="true">Dec 17<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I don&rsquo;t really have a better name for this. It&rsquo;s also not completely clean, but it works. I had, almost a year ago (362 days ago), written a blog post about <a href="http://trevoke.net/blog/2008/12/20/lexicographic-permutations-in-ruby">lexicographic permutations</a>. That was about permutations of elements within one array.
+Someone on ruby-forum asked about permutations between multiple arrays. I <a href="http://stackoverflow.com/questions/710670/c-permutation-of-an-array-of-arraylists">found something in C#</a>, which I was happy to transcribe to Ruby and tweak a little.</p>
+
+<div>
+  <pre><code class='ruby'>def array_permutations array, index=0
+  # index is 0 by default : start at the beginning, more elegant.
+  return array[-1] if index == array.size - 1 # Return last element if at end.
+  result = []
+  array[index].each do |element| # For each array
+    array_permutations(array, index + 1).each do |x| # Permute permute permute
+      result &amp;lt;&amp;lt; &amp;quot;#{element}, #{x}&amp;quot;
+    end
+  end
+  return result
+end</code></pre>
+</div>
+
+
+<p>So, we get this:</p>
+
+<div>
+  <pre><code class='ruby'>first = [&#39;one&#39;, &#39;two&#39;]
+second = [&#39;three&#39;, &#39;four&#39;]
+third = &#39;five&#39;, &#39;six&#39;]
+result = array_permutations [first, second, third]
+=&gt; [&#39;one, three, five&#39;, &#39;one, three, six&#39;, &#39;one, four, five&#39;, &#39;one, four, six&#39;,
+   &#39;two, three, five&#39;, &#39;two, three, six&#39;, &#39;two, four, five&#39;, &#39;two, four, six&#39;]</code></pre>
+</div>
+
+
+<p>Magic!</p>
+
+<hr />
+
+<p>Edit &ndash; of course, my solution is hackish, and someone came up with a quicker and more elegant solution:</p>
+
+<div>
+  <pre><code class='ruby'>def fancy_array_permutation array
+  return array[0] if array.size == 1
+  first = array.shift
+  return first.product( fancy_array_permutation(array) ).map {|x| x.flatten.join(&#39; &#39;)}
+end</code></pre>
+</div>
+
+
+<p>This gives the same result as above.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/15/open-source-is-wide-open-calling-rake-tasks/">Open Source Is Wide Open: Calling RAKE Tasks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-15T14:38:25-05:00" pubdate data-updated="true">Dec 15<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://railsblogger.blogspot.com/2009/03/in-queue_15.html">Open source is wide open: Calling RAKE tasks</a>.</p>
+
+<p>Good to know.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/09/on-re-reading-old-code/">On Re-reading Old Code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-09T12:07:51-05:00" pubdate data-updated="true">Dec 9<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I came across this beauty:</p>
+
+<p>[ruby]def same_modality? list
+  check = list[0][0]
+  list.each do |i|</p>
+
+<pre><code>return false if check != i[0]
+</code></pre>
+
+<p>  end
+  return true
+end[/ruby]
+This was &ldquo;necessary&rdquo; because I got an array of one-element arrays back, and I wanted to check whether or not that one element was the same across the array.</p>
+
+<p>Three seconds of thinking made me realize that just maybe, I could do this:
+[ruby]list.uniq.size == 1[/ruby]</p>
+
+<p>I -like- Ruby.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/26/monday-night-training/">Monday Night Training</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-26T14:17:52-05:00" pubdate data-updated="true">Nov 26<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I received an email from sensei on Monday (sent to every student) &ndash; if you&rsquo;ll be here tonight, bring your fighting gear. Uh-oh. Her sensei was there and taught a few classes, including the adults. The entire class turned out to be pretty much a blur of drills. I&rsquo;ll be able to dredge them out of my body memory, I think.
+A drill about basics &ndash; chain two basics together, using shifting. Then up to six basics together, by series of two.
+A couple of kicking drills. A few fighting drills &ndash; these are important. shift, step back, kick, finish, disengage.
+Come in and jam, elbow, finish.
+I am obfuscating these on purpose.
+This was a harder training session than I&rsquo;ve experienced in a while, as evidenced by the appearance after 40-some hours of a slight tightness in my upper abs and shoulder muscles.. Oh, and the fact that my lower legs were one solid body, instead of having a freely moving calf muscle.</p>
+
+<p>Of course, I was supposed to the student in the best shape, so I wonder how the others did feel. This wasn&rsquo;t particularly hard on my mind, just a little bit past my comfort zone.. I do feel like I am more aware that I can stand more than I think. Was my willpower muscle flexed? It seems like it was.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/11/06/auto-vivifying-hashes-in-ruby/">Auto-vivifying Hashes in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-06T08:27:09-05:00" pubdate data-updated="true">Nov 6<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>An auto-vivifying hash is a hash that lets you create sub-hashes automatically. This means that the following code becomes possible:</p>
+
+<p>[code]def cnh # silly name &quot;create nested hash&quot;
+  Hash.new {|h,k| h[k] = Hash.new(&amp;h.default_proc)}
+end
+my_hash = cnh
+my_hash[1][2][3] = 4
+my_hash # =&gt; { 1 =&gt; { 2 =&gt; { 3 =&gt;4 } } }
+[/code]</p>
+
+<p>This is useful because it reduces the amount of logic in the code. No more &ldquo;If sub-hash doesn&rsquo;t exist, create it!&rdquo;</p>
+
+<p>Courtesy of Robert Klemme on www.ruby-forum.com</p>
+
+<hr />
+
+<p>Update:</p>
+
+<p>Facets has a way of doing an auto-vivifying hash, too! Thanks to <a href="http://stackoverflow.com/questions/1503671/ruby-hash-autovivification-facets">Stackoverflow</a>.</p>
+
+<div>
+<div>[code]
+# Monkey patching Hash class:
+# File lib/core/facets/hash/autonew.rb, line 19
+  def self.autonew(*args)
+    leet = lambda { |hsh, key| hsh[key] = new( &amp;leet ) }
+    new(*args,&amp;leet)
+  end
+[/code]
+
+</div>
+</div>
+
+
+<div>
+<div>
+<div>
+
+The standard <a rel="nofollow" href="http://ruby-doc.org/core/classes/Hash.html#M002840">new  method for Hash</a> accepts a block. This block is called in the event  of trying to access a key in the Hash which does not exist. The block is  passed the Hash itself and the key that was requested (the two  parameters) and should return the value that should be returned for the  requested key.
+
+You will notice that the <code>leet</code> lambda does 2 things. It  returns a new Hash with <code>leet</code> itself as the block for  handling defaults. This is the behaviour which allows <code>autonew</code> to work for Hashes of arbitrary depth. It also assigns this new Hash to  <code>hsh[key]</code> so that next time you request the same key you  will get the existing Hash rather than a new one being created.
+
+Sweet deal!
+
+</div>
+</div>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/28/closures-in-ruby/">Closures in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-28T09:22:42-04:00" pubdate data-updated="true">Oct 28<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I found a <a href="http://innig.net/software/ruby/closures-in-ruby.rb">script</a> that explains everything really well.
+Credit goes to:</p>
+
+<h1>CLOSURES IN RUBY     Paul Cantrell    <a href="http://innig.net">http://innig.net</a></h1>
+
+<h1>Email: username &ldquo;cantrell&rdquo;, domain name &ldquo;pobox.com&rdquo;</h1>
+
+<p>Along with <a href="http://eli.thegreenplace.net/2006/04/18/understanding-ruby-blocks-procs-and-methods/">this blog entry</a>, it&rsquo;s made the whole deal much easier to figure out.</p>
+
+<p>Now.. Why didn&rsquo;t I get that when I was looking at LISP?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/27/extending-ruby-for-fun-and-profit/">Extending Ruby for Fun and Profit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-27T21:42:28-04:00" pubdate data-updated="true">Oct 27<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wow. I just watched Dave Thomas&#8217; talk <a href="http://www.infoq.com/presentations/metaprogramming-ruby">Ruby Metaprogramming: Extending Ruby for Fun and Profit</a> and it explained so many things.</p>
+
+<p>It&rsquo;s quite worth watching if you like Ruby and don&rsquo;t know about metaprogramming and Ruby hooks and what &lsquo;self&rsquo; means, fully.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/14/hologic-r2-service-password/">Hologic R2 Service Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-14T08:33:02-04:00" pubdate data-updated="true">Oct 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I feel kinda bad plaintexting this.. You can contact me if you can&rsquo;t figure it out yourself.</p>
+
+<p>The service password for the R2 unit is in this sentence.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/6/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Weiqi | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/weiqi/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby SgfParser Now Really Working!]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/12/31/ruby-sgfparser-now-really-working/"/>
+    <updated>2009-12-31T13:18:51-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/12/31/ruby-sgfparser-now-really-working</id>
+    <content type="html"><![CDATA[<p>Thanks @alfmikula, it saves properly and has even been gemified. I will soon push it to gemcutter and maybe put a homesite on Rubyforge, not sure.
+It can be found at <a href="http://github.com/Trevoke/SGFParser">http://github.com/Trevoke/SGFParser</a> for now, get the code while it&rsquo;s hot! :&ndash;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SGF Parser Updated]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/10/12/sgf-parser-updated/"/>
+    <updated>2009-10-12T13:04:02-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/10/12/sgf-parser-updated</id>
+    <content type="html"><![CDATA[<p>Someday I&rsquo;ll come out with a proper revision numbering scheme for it.
+I&rsquo;ve implemented some <a href="http://cukes.info/">Cucumber</a> testing, the code now <em>actually</em> parses SGF files properly, including the KGS ones, it&rsquo;ll work on Ruby 1.8.6, 1.8.7, 1.9.1, so .. It&rsquo;s all good on that front.</p>
+
+<p>The code&rsquo;s not as clean as I&rsquo;d like it to be, and probably not as commented, either.
+<a href="http://github.com/Trevoke/SGFParser">http://github.com/Trevoke/SGFParser</a></p>
+
+<p>I am not -saving- SGF files with it yet, but heck if I&rsquo;m not parsing them. And now YOU can, too !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby SGF Parser]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/09/15/ruby-sgf-parser/"/>
+    <updated>2009-09-15T23:20:17-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/09/15/ruby-sgf-parser</id>
+    <content type="html"><![CDATA[<p>So, I play weiqi (known as the game of go, but I prefer using the chinese name).
+There are some SGF parsers out there for Ruby, but I wanted to write my own &ndash; the other ones didn&rsquo;t seem comprehensive enough, didn&rsquo;t seem Ruby-like enough in their objectifiying the <del datetime="2009-09-16T04:15:45+00:00">women</del> data.
+My original goal was twofold: write a script to rename all the SGF files in my collection so they can be easily parsed later, and &hellip; Learn more Ruby!
+Here is the github link: <a href="http://github.com/Trevoke/SGFParser">http://github.com/Trevoke/SGFParser</a>
+It&rsquo;s a work in progress. Right now it parses the SGF file properly, but the user has a fair amount of work to do to use the data.. Which, maybe, is the way it needs to be. But I&rsquo;m gonna try to follow the principle of least surprise to the bitter end! :)</p>
+]]></content>
+  </entry>
+  
+</feed>

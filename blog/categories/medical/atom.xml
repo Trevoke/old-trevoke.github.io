@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Medical | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/medical/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hologic R2 Service Password]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/10/14/hologic-r2-service-password/"/>
+    <updated>2009-10-14T08:33:02-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/10/14/hologic-r2-service-password</id>
+    <content type="html"><![CDATA[<p>I feel kinda bad plaintexting this.. You can contact me if you can&rsquo;t figure it out yourself.</p>
+
+<p>The service password for the R2 unit is in this sentence.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iReadmammo : Easy DB Source / DICOM Node Config]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/01/04/ireadmammo-easy-db-source-dicom-node-config/"/>
+    <updated>2009-01-04T22:11:06-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/01/04/ireadmammo-easy-db-source-dicom-node-config</id>
+    <content type="html"><![CDATA[<p>Cedara iReadmammo (now Merge Mammo) is a DICOM viewer geared towards mammography reading. By default, the data source you use for reading is the local machine, but you can add others &mdash; and you can set up various DICOM nodes so it can transfer images between various studies. One big issue is that it is not promiscuous for transfers, so if the other machine doesn&rsquo;t know about you, you can&rsquo;t transfer. Actually, since the Query/Retrieve tool allows both a source and destination different than the local machine, you can use iReadmammo for transfer between two other machines.. As long as all three of them know each other.
+<a href='http://trevoke.net/blog/wp-content/uploads/2009/01/ireadmammodatasource.rb'>This script</a> attempts to make life a little easier when first setting up the machine, by parsing two YAML config files (one for DB source, one for DICOM nodes) and adding them automatically. As an added bonus, there is the option of adding the new machine to remote hosts and scheduling a task to run at midnight to stop and restart the scriptservice (so the software reads the config again).
+It requires the files &lsquo;ireadmammo_hosts.yml&rsquo; (for Datasources) and &lsquo;DCconfig.yml&rsquo; (for DICOM nodes), and if they don&rsquo;t exist in the same directory as the script, it&rsquo;ll offer to create them for you and allow you to configure them.
+Error-checking is a little spotty, as I really wanted to finish the script at this point. It&rsquo;s the biggest thing I&rsquo;ve written in several years.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby HL7]]></title>
+    <link href="http://blog.trevoke.net/blog/2008/12/17/ruby-hl7/"/>
+    <updated>2008-12-17T09:15:20-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2008/12/17/ruby-hl7</id>
+    <content type="html"><![CDATA[<p>And right on schedule on this blog, behind <a title="Ruby DICOM" href="http://trevoke.net/blog/2008/12/16/ruby-dicom/" target="_blank">Ruby DICOM</a>, here comes<a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank"> </a><a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank">Ruby-HL7</a>!
+Gots to love the Ruby. A lot of potential.. And to think they&rsquo;re revamping the language.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby DICOM]]></title>
+    <link href="http://blog.trevoke.net/blog/2008/12/16/ruby-dicom/"/>
+    <updated>2008-12-16T11:20:14-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2008/12/16/ruby-dicom</id>
+    <content type="html"><![CDATA[<p>I am pretty excited about <a title="Ruby DICOM" href="http://dicom.rubyforge.org/" target="_blank">this</a> &mdash; a Ruby library to edit <a title="DICOM homepage" href="http://medical.nema.org" target="_blank">DICOM</a> data!</p>
+
+<p>It&rsquo;s ridiculously geeky but.. Well, that&rsquo;s what I love about Ruby, it&rsquo;s got pretty much everything!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Can You See With Your Tongue?]]></title>
+    <link href="http://blog.trevoke.net/blog/2008/12/01/can-you-see-with-your-tongue/"/>
+    <updated>2008-12-01T11:44:14-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2008/12/01/can-you-see-with-your-tongue</id>
+    <content type="html"><![CDATA[<p><a href="http://discovermagazine.com/2003/jun/feattongue">Can You See With Your Tongue? | Senses | DISCOVER Magazine</a>.</p>
+
+<p>This is an amazing article &ndash; a scientist who managed to make people react to light-based input without using their eyes. The human brain is &hellip; limitless within its limits ? It&rsquo;s definitely worth the read.</p>
+]]></content>
+  </entry>
+  
+</feed>

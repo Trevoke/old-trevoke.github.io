@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Connecting to Sybase With Rails on Windows XP - Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="This is known to work on ASE 12.5.1 &ndash; you&rsquo;re welcome to let me know what else worked, I am particularly curious about later versions of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Connecting to Sybase With Rails on Windows XP</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-11T11:05:24-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This is known to work on ASE 12.5.1<span style="font-size: x-small;"><span style="font-family: Verdana;"> &ndash; you&rsquo;re welcome to let me know what else worked, I am particularly curious about later versions of Sybase ASE, such as 15.
+</span></span></p>
+
+<p>Prerequisites:</p>
+
+<ol>
+    <li><a title="Sybase PC Client" href="http://trevoke.net/sybase/pcclient_1252.zip">Sybase PC Client 12.52</a></li>
+    <li><a title="Ruby Sybase connection" href="http://trevoke.net/sybase/ruby-sybase-winxp.zip">The Ruby Sybase  files</a></li>
+    <li>gem install activerecord-sybase-adapter -s http://gems.rubyonrails.org</li>
+</ol>
+
+
+<p>Put the Sybase files in C:\ruby\lib\ruby\site_ruby\1.8\i386-msvcrt .</p>
+
+<p>Copy all the DLLs in %SYBASE%\OCS-12_5\dll and put them in %RUBY%\bin (if you are not familiar with Windows notation, this simply means to go where you installed each of Sybase and Ruby and then go to the proper subdirectory). Why all of them? Well, because I&rsquo;m too lazy to know which ones we -do- need.</p>
+
+<p>Set some environment variables, just to make sure Sybase works fine:</p>
+
+<p>Right-click on My Computer, Properties &gt; Advanced &gt; Environment Variables
+If you have full permissions, go ahead and add those as SYSTEM VARIABLES.. Otherwise, well, only for your user (but aren&rsquo;t you doing this on a server?).</p>
+
+<p>SYBASE=c:\sybase    (where you installed Sybase).</p>
+
+<p>JDBC_HOME=c:\sybase\jConnect-6_0   (again, where you installed Sybase, then the subdirectory).</p>
+
+<p>CLASSPATH=%JDBC_HOME%\classes\jconn3.jar (just make sure that&rsquo;s the right number).</p>
+
+<p>If you&rsquo;re going to create a user on your Sybase server for specific Rails usage, it needs to have SELECT permissions on the following : <strong>sysobjects, syscolumns, systypes, syscomments</strong>.</p>
+
+<p>Edit your %SYBASE%\ini\sql.ini and add the information for your server in there.</p>
+
+<p>Next.. In Rails, the magic will look like this in database.yml :</p>
+
+<p>[code lang=&ldquo;ruby&rdquo;]
+production:
+adapter: sybase
+database: &lt;YOUR_DB_HERE&gt;
+username: &lt;USERNAME&gt;
+password: &lt;PASSWORD&gt;
+host: &lt;NAME_GIVEN_IN_SQL_INI_HERE&gt;
+[/code]</p>
+
+<p>And that should be pretty much it!</p>
+
+<p>Don&rsquo;t forget to edit your model if you&rsquo;re working with legacy data:</p>
+
+<p>[code lang=&ldquo;ruby&rdquo;]
+class Patient &lt; ActiveRecord::Base
+set_table_name &quot;some_odd_name&quot;
+set_primary_key &quot;some_primary_key_column&quot;
+end
+[/code]</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Trevoke</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-11T11:05:24-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/databases/'>databases</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.trevoke.net/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp/" data-via="Trevoke" data-counturl="http://blog.trevoke.net/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/09/09/rubygems-through-a-proxy-with-authentication/" title="Previous Post: Rubygems through a proxy with authentication">&laquo; Rubygems through a proxy with authentication</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/09/14/rails-authentication-tutorial/" title="Next Post: Rails authentication tutorial">Rails authentication tutorial &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

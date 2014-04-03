@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vista | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/vista/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Windows Vista : Corrupt User Profile]]></title>
+    <link href="http://blog.trevoke.net/blog/2008/12/07/windows-vista-corrupt-user-profile/"/>
+    <updated>2008-12-07T12:22:35-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2008/12/07/windows-vista-corrupt-user-profile</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m taking this from <a href="http://blog.tiensivu.com/aaron/archives/932-Dealing-with-corrupt-user-profiles-in-Vista-and-saving-the-contents.html" target="_blank">this page</a> but thought I should try to propagate it a little since it took me forever to find it.</p>
+
+<p>Assume in this example that the username is &lsquo;atiensivu&rsquo;, the domain is &lsquo;staff&rsquo;, and the user profile is located in %systemdrive%\users\atiensivu. %systemdrive% is typically C: on standard Vista installs. Replace every instance &lsquo;atiensivu&rsquo; with the username of the corrupt profile.
+<a id="more"></a><a id="more-29"></a>
+1. If you can log into the profile, make note of the %USERPROFILE% environment variable value. Most likely it will be &lsquo;C:\Users\atiensivu&rsquo; or &lsquo;C:\Users\atiensivu.staff&rsquo;. Logoff.</p>
+
+<ol>
+<li><p>If you have logged in with the profile at any point since your last reboot or you suspect there are files in use within the profile, reboot. The important part is to make sure there are no open files within the broken profile directory.</p></li>
+<li><p>Login as administrator or another account with local admin rights.</p></li>
+<li><p>Run &lsquo;takeown /r /a /d y /f %systemdrive%\users\atiensivu&rsquo;.
+(Note : before doing step 4, remove things like the IE cache if you can, save yourself some time).</p></li>
+<li><p>From %systemdrive%\users, rename &lsquo;atiensivu&rsquo; to &lsquo;atiensivu.old&rsquo;.</p></li>
+<li><p>Within %systemdrive%\users, create a directory called &lsquo;atiensivu&rsquo;.</p></li>
+<li><p>Run &lsquo;takeown /r /u staff\atiensivu /f %systemdrive%\users\atiensivu&rsquo;.</p></li>
+<li><p>Run regedit and go to HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList and delete the SID key for the corrupt profile. Easiest way to find the correct SID is to search from the &lsquo;ProfileList&rsquo; key for the directory mentioned in %USERPROFILE% in step #1.</p></li>
+<li><p>Logoff.</p></li>
+<li><p>Log into the &lsquo;atiensivu&rsquo; account. A new profile should be created. Copy over any files you might want from the old profile directory.</p></li>
+</ol>
+
+
+<p>The &lsquo;takeown&rsquo; commands might be overkill but I don&rsquo;t like getting permission errors.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="Taking the code from this other blog &hellip; It&rsquo;s pretty elegant Ruby! I won&rsquo;t waste your time repeating what the guy wrote in his blog &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/page/10">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/20/lexicographic-permutations-in-ruby/">(Lexicographic) Permutations in Ruby</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-20T21:13:19-05:00" pubdate data-updated="true">Dec 20<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Taking the code from <a title="Permutations in Ruby and Python" href="http://abachman.disqus.com/simple_permutations_in_python_and_ruby/" target="_blank">this other blog</a> &hellip; It&rsquo;s pretty elegant Ruby!</p>
+
+<p>I won&rsquo;t waste your time repeating what the guy wrote in his blog &ndash; you&rsquo;re welcome to go read it. I just felt that I should help spread a little this elegant implementation of the standard permutation algorithm, fixing a small bug within it in the process. If, like me, you have issues understanding how to use this, well &ndash; you have to use this function and call a block of code on it. It runs the block of code on each permutation it finds.</p>
+
+<p>[sourcecode language=&ldquo;ruby&rdquo;]def permutations array
+  if array.size &lt; 2</p>
+
+<pre><code>yield array
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>array.each do |element|
+  permutations(array.select() {|n| n != element}) \
+  {|val| yield([element].concat val)}
+end
+</code></pre>
+
+<p>  end
+end[/sourcecode]</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/19/more-students-testing/">More Students Testing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-19T22:43:09-05:00" pubdate data-updated="true">Dec 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This week two more students tested. We have a new green belt and a new blue belt. They did pretty well, but I am completely amazed at how many excuses adults have. Their heads are full of them. Can&rsquo;t they just listen and say &lsquo;yes&rsquo; like they were taught when they were kids? Talking back is a privilege, not a right.
+Ooh.. That&rsquo;s good.. I&rsquo;ll reuse that.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/17/ruby-hl7/">Ruby HL7</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-17T09:15:20-05:00" pubdate data-updated="true">Dec 17<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>And right on schedule on this blog, behind <a title="Ruby DICOM" href="http://trevoke.net/blog/2008/12/16/ruby-dicom/" target="_blank">Ruby DICOM</a>, here comes<a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank"> </a><a title="Ruby HL7" href="http://ruby-hl7.rubyforge.org/" target="_blank">Ruby-HL7</a>!
+Gots to love the Ruby. A lot of potential.. And to think they&rsquo;re revamping the language.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/16/ruby-dicom/">Ruby DICOM</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-16T11:20:14-05:00" pubdate data-updated="true">Dec 16<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am pretty excited about <a title="Ruby DICOM" href="http://dicom.rubyforge.org/" target="_blank">this</a> &mdash; a Ruby library to edit <a title="DICOM homepage" href="http://medical.nema.org" target="_blank">DICOM</a> data!</p>
+
+<p>It&rsquo;s ridiculously geeky but.. Well, that&rsquo;s what I love about Ruby, it&rsquo;s got pretty much everything!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/07/windows-vista-corrupt-user-profile/">Windows Vista : Corrupt User Profile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-07T12:22:35-05:00" pubdate data-updated="true">Dec 7<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m taking this from <a href="http://blog.tiensivu.com/aaron/archives/932-Dealing-with-corrupt-user-profiles-in-Vista-and-saving-the-contents.html" target="_blank">this page</a> but thought I should try to propagate it a little since it took me forever to find it.</p>
+
+<p>Assume in this example that the username is &lsquo;atiensivu&rsquo;, the domain is &lsquo;staff&rsquo;, and the user profile is located in %systemdrive%\users\atiensivu. %systemdrive% is typically C: on standard Vista installs. Replace every instance &lsquo;atiensivu&rsquo; with the username of the corrupt profile.
+<a id="more"></a><a id="more-29"></a>
+1. If you can log into the profile, make note of the %USERPROFILE% environment variable value. Most likely it will be &lsquo;C:\Users\atiensivu&rsquo; or &lsquo;C:\Users\atiensivu.staff&rsquo;. Logoff.</p>
+
+<ol>
+<li><p>If you have logged in with the profile at any point since your last reboot or you suspect there are files in use within the profile, reboot. The important part is to make sure there are no open files within the broken profile directory.</p></li>
+<li><p>Login as administrator or another account with local admin rights.</p></li>
+<li><p>Run &lsquo;takeown /r /a /d y /f %systemdrive%\users\atiensivu&rsquo;.
+(Note : before doing step 4, remove things like the IE cache if you can, save yourself some time).</p></li>
+<li><p>From %systemdrive%\users, rename &lsquo;atiensivu&rsquo; to &lsquo;atiensivu.old&rsquo;.</p></li>
+<li><p>Within %systemdrive%\users, create a directory called &lsquo;atiensivu&rsquo;.</p></li>
+<li><p>Run &lsquo;takeown /r /u staff\atiensivu /f %systemdrive%\users\atiensivu&rsquo;.</p></li>
+<li><p>Run regedit and go to HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList and delete the SID key for the corrupt profile. Easiest way to find the correct SID is to search from the &lsquo;ProfileList&rsquo; key for the directory mentioned in %USERPROFILE% in step #1.</p></li>
+<li><p>Logoff.</p></li>
+<li><p>Log into the &lsquo;atiensivu&rsquo; account. A new profile should be created. Copy over any files you might want from the old profile directory.</p></li>
+</ol>
+
+
+<p>The &lsquo;takeown&rsquo; commands might be overkill but I don&rsquo;t like getting permission errors.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/01/can-you-see-with-your-tongue/">Can You See With Your Tongue?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-01T11:44:14-05:00" pubdate data-updated="true">Dec 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://discovermagazine.com/2003/jun/feattongue">Can You See With Your Tongue? | Senses | DISCOVER Magazine</a>.</p>
+
+<p>This is an amazing article &ndash; a scientist who managed to make people react to light-based input without using their eyes. The human brain is &hellip; limitless within its limits ? It&rsquo;s definitely worth the read.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/24/winwget-wget-for-windows/">WinWget - Wget for Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-24T16:08:26-05:00" pubdate data-updated="true">Nov 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://lifehacker.com/5086682/winwget-makes-automated-downloads-a-breeze">WinWget on Lifehacker</a></p>
+
+<p>Very handy graphical download tool.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/12/martial-arts-while-sick/">Martial Arts While Sick</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-12T17:41:04-05:00" pubdate data-updated="true">Nov 12<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>On Monday I went to the dojo as usual, though I&rsquo;d had a cold over the week-end and wasn&rsquo;t quite over it (I&rsquo;m still not over it now..). During form practice, I was constantly correcting myself &ndash; I guess that goes to show I need to practice a lot more, if I dedicate this much mindpower to each form.. :)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/04/mimvista-and-auto-deletion-of-archived-studies/">MIMVista and Auto-deletion of Archived Studies</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-04T16:56:03-05:00" pubdate data-updated="true">Nov 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The MIM keeps 60 days by default. That may be too much for you..</p>
+
+<p>By default, the folder C:\Program Files\MIM\config should make you really happy, it&rsquo;s got lots of plain text files with configuration for all kinds of settings.</p>
+
+<p>cleanup.txt has &ldquo;ARCHIVE LEFTOVER AGE (DAYS) := 60</p>
+
+<p>Change that to whatever you feel is appropriate for you needs.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/11/04/an-old-school-6th-dan/">An Old-school 6th Dan</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-04T15:44:55-05:00" pubdate data-updated="true">Nov 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday evening a man who trained about as long as sensei came to train with us. Black obi, rather frayed to white. He&rsquo;d trained a long time under his uncle, and then ~15 years under sensei&rsquo;s sensei. He&rsquo;d taken a break for a while, so he was a bit out of shape, but his mindset, his attitude, his devotion were 100% into everything he did &ndash; an important lesson which I forget all too often.</p>
+
+<p>He left, very happy to have joined us. I hope we&rsquo;ll see him again.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/11/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/9/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

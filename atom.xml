@@ -4,7 +4,7 @@
   <title><![CDATA[Seven Steps]]></title>
   <link href="http://blog.trevoke.net/atom.xml" rel="self"/>
   <link href="http://blog.trevoke.net/"/>
-  <updated>2014-04-03T15:58:35-04:00</updated>
+  <updated>2014-04-03T16:00:18-04:00</updated>
   <id>http://blog.trevoke.net/</id>
   <author>
     <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
@@ -12,5 +12,721 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Shu Ha Ri and Evolution of a Skill]]></title>
+    <link href="http://blog.trevoke.net/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/"/>
+    <updated>2014-02-18T15:17:06-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill</id>
+    <content type="html"><![CDATA[<p>Shu Ha Ri comes from the world of Japanese Noh theater, and has been since attached to the world of martial arts and <a title="Alistair Cockburn's words on Shu Ha Ri" href="http://alistair.cockburn.us/Shu+Ha+Ri">Agile development</a>. Roughly, &ldquo;shu ha ri&rdquo; means &ldquo;learn / detach / transcend&rdquo;. The link has some words about that meaning. I&rsquo;d like to talk about my particular take on Shu Ha Ri, which came out of a parking-lot conversation with a martial arts teacher friend of mine:</p>
+
+<ol>
+    <li>Shu. Do the damn technique.</li>
+    <li>Ha. Vary the damn technique.</li>
+    <li>Ri. You don&#8217;t need the damn technique.</li>
+</ol>
+
+
+<p>And here is the slightly longer interpretation.</p>
+
+<p>SHU: right foot in front, grab the left wrist from the front with the right hand. Study the particular wrist escape that has been taught in this situation. In Agile words: be rigorous about your Agile practice. Do it &ldquo;dumbly&rdquo; until you get good at it and everyone in your team is OK with it.</p>
+
+<p>HA: grab some wrist in some way, and play with that wrist escape. Add footwork. See what works and what doesn&rsquo;t. In Agile words, now&rsquo;s the time to see when is a good time for standup, what should be said, how long the standup should take. Or maybe change the beginning of the iteration; or how you do story breakdown. Pick ONE variable, change it, and learn from what happened, whether it worked or it didn&rsquo;t (&ldquo;worked&rdquo; is a variable term, at this point of your growth, you&rsquo;ll know it well enough when you see it).</p>
+
+<p>RI: It&rsquo;s not about a wrist grab anymore, but about much more fundamental principles. Detached from the technique, or the labels of &ldquo;wrist grab&rdquo; and &ldquo;wrist escape&rdquo;, it simply becomes about the right movement producing the right result (&ldquo;right&rdquo; is a variable term, at this point of your growth, you&rsquo;ll know it without seeing it). In Agile words, you understand why a standup is just one example of a practical application of the Agile principles, and you are able to create custom applications of the principle for your teams, so that they can be Agile in the way that works best for them.</p>
+
+<p>&nbsp;</p>
+
+<p>You may notice that HA and RI seem just a little similar from the point of vagueness: you&rsquo;ll know it when you see it. It takes a long time to work through HA, and the line between the two is fairly definite, but hard to find. So practice, practice, practice. Or rather, perfect practice, perfect practice, perfect practice. And check your ego at the door.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning and Fear]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/11/18/learning-and-fear/"/>
+    <updated>2013-11-18T22:56:15-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/11/18/learning-and-fear</id>
+    <content type="html"><![CDATA[<blockquote>
+<div>“Life is going to present to you a series of transformations. And the point of education should be to transform you. To teach you how to be transformed so you can ride the waves as they come. But today, the point of education is not education. It’s accreditation. The more accreditation you have, the more money you make. That’s the instrumental logic of neoliberalism. And this instrumental logic comes wrapped in an envelope of fear. And my Ivy League, my MIT students are the same. All I feel coming off of my students is fear. That if you slip up in school, if you get one bad grade, if you make one fucking mistake, the great train of wealth will leave you behind. And that’s the logic of accreditation. If you’re at Yale, you’re in the smartest 1% in the world. […] And the brightest students in the world are learning in fear. I feel it rolling off of you in waves. But you can’t learn when you’re afraid. You cannot be transformed when you are afraid.”</div>
+<div></div>
+<div>- Junot Diaz, from a recent speech at Yale</div></blockquote>
+
+
+<div>If you spend more than an hour with me in person, the chances of me mentioning Dune increase asymptotically. So it shouldn&#8217;t be any surprise that this quote brought to mind two quotes from Dune, and here they are.</div>
+
+
+<blockquote>
+<div>Muad&#8217;Dib learned rapidly because his first training was in how to learn. And the first lesson of all was the basic trust that he could learn. It&#8217;s shocking to find how many people do not believe they can learn, and how many more believe learning to be difficult. Muad&#8217;Dib knew that every experience carries its lesson.</div></blockquote>
+
+
+<div>And the other one, well, I wrote a blog entry about..</div>
+
+
+<blockquote>
+<div><a title="The Litany Against Fear" href="http://trevoke.net/blog/2013/11/18/the-litany-against-fear/">I must not fear.</a> Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain.</div></blockquote>
+
+
+<div></div>
+
+
+<div>    I hadn&#8217;t really thought of connecting these two before, even though to me they are some of the most important quotes in the entire work.</div>
+
+
+<div>    It does make sense though. It takes a fundamental trust in oneself to learn, and when you are afraid, you are basically robbed of that fundamental trust. So if Junot is right, and he probably is, since he lives in the educational system, there is a deep flaw in the system which is in fact making it harder for students to learn.</div>
+
+
+<div>    When a system grows, sometimes a madness creeps in. Like Terry Pratchett wrote, &#8221;<em>[a dangerous thought is that] while all important enterprises need careful organization, it is the organization that needs organizing, rather than the enterprise.</em>&#8221; So, after a while, it&#8217;s less about the students learning and more about the grades, and then it&#8217;s more about making sure the teachers do their work. But how do you make sure teachers do work? Ah-ha! There&#8217;s a thought. Let&#8217;s organize THAT. And the students? Well, they&#8217;re in school, they&#8217;ll learn, right? And so it begins. Subtly. Insidiously.</div>
+
+
+<div></div>
+
+
+<div>    As students, resisting that pressure is very difficult, but if you can, if you&#8217;re able to put it out of your mind, if you&#8217;re able to recognize it and not let it crush you, then you can truly learn, truly get an education. Truly be transformed, as Junot puts it. And the result will always be a marvel.</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Litany Against Fear]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/11/18/the-litany-against-fear/"/>
+    <updated>2013-11-18T22:28:58-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/11/18/the-litany-against-fear</id>
+    <content type="html"><![CDATA[<p>So, the litany against fear goes like this:</p>
+
+<p>&nbsp;</p>
+
+<blockquote>I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear. I will permit it to pass over me and through me. And when it has gone past I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain.</blockquote>
+
+
+<p>&nbsp;</p>
+
+<p>And here&rsquo;s my attempt at an interpretation of its meaning.</p>
+
+<p><strong>I will not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration.</strong><br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[1]" /><br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[2]" />    While it is a natural thing to feel fear and be afraid, I will not give in to it and become the fear. Becoming the fear means to revert to the basest instincts that we have, usually fight-or-flight, and then one&rsquo;s actions are only concerned with survival. There is none of the higher reasoning left. This can be expanded slightly by adding another quote from Dune, from the scene where Paul meets the Gom Jabbar. The Reverend Mother says,</p>
+
+<blockquote><br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[5]" />&#8220;You&#8217;ve heard of animals chewing off a leg to escape a trap. There&#8217;s an animal kind of trick. A human would remain in the trap, endure the pain, feigning death that he might kill the trapper and remove a threat to his kind.&#8221;</blockquote>
+
+
+<br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[8]" />    We&#8217;re talking, fundamentally, about a different level of perception. Your existence is not about yourself, it is about survival of your species.<br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[13]" /><br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[14]" /><strong>I will face my fear. I will allow it to pass over me and through me.</strong>
+
+
+<p>I will accept that I am afraid. This means recognizing that emotions are a part of one&rsquo;s self, and not refusing to acknowledge a single part of one&rsquo;s identity. I will look to my fear with compassion and kindness, for it is a part of me. Looking to any part of me with less than compassion of kindness is much like hating myself, and that&rsquo;s just not productive.<br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[18]" />    I will allow my fear, as an emotion, to wash through my body and run its course, so that the hormonal and nervous systems in my body do not get overworked or damaged by unnatural resistance to a normal behavior. I will also allow the fear to talk to the brain, so I can communicate with the fear, examine where it came from and, if necessary, figure out why it came up, so that the origin may be extirpated if necessary.<br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[20]" /><br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[21]" /><strong>And when the fear has gone, I will turn the inner eye on its path. Where it was, there will be nothing. Only I will remain.</strong></p>
+
+<p>Just like death, fear leaves a mark on the ego, on the self. A person can end up damaged, responding only to the behaviors implanted by the fear response, instead of responding to the actual situations with which they are faced. <br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[23]" />    Once the fear is done, and the situation is resolved, I will examine my self, and realize that my self is still there, and did not get damaged by the fear. I will realize that the fear, like the tide on the beach, came and went, and like the ocean, I am unmoved by the tide.<br data-reactid=".r[1tqqn].[1][3][1]{comment428735057185682_432988106760377}.[0].{right}.[0].{left}.[0].[0].[0][3].[0].[3].[0].[25]" />    Thus, I will reinforce the behavior, so that next time, this is even easier, because I have even more trust in how this works, until it becomes an automatic response.</p>
+
+<p>&nbsp;</p>
+
+<p>This is a deep and powerful mantra, which hints at tremendous self-control and self-awareness. As always, the first step is awareness.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby Is Alive and Well]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well/"/>
+    <updated>2013-11-11T21:18:17-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m back from Rubyconf.</p>
+
+<p>Some people say Ruby is dead. We can probably gloss over Zed Shaw&rsquo;s famous <a title="Zed Shaw's famous rant on the Rails community" href="http://web.archive.org/web/20080103072111/http://www.zedshaw.com/rants/rails_is_a_ghetto.html" target="_blank">rant</a>, since it&rsquo;s from roundabout 2007. My understanding is that the thought came about because of the many new trends in programming languages: first node, then Erlang&rsquo;s comeback and the birth of Elixir. Evented programming, non-blocking IO, all the fancy buzzwords, and everyone craps on Ruby&rsquo;s Global Interpreter Lock.</p>
+
+<p>Given the talks at Rubyconf, Ruby is most likely not dead (and our internal rubylist has an ongoing recent conversation about this if you&rsquo;re curious). There were talks on API design, on fault-tolerant data, on machine-learning, on parallel execution and concurrency, a talk on <a title="Raft: a blog entry with links and stuff" href="http://highscalability.com/blog/2013/8/7/raft-in-search-of-an-understandable-consensus-algorithm.html" target="_blank">Raft</a> (an algorithm to obtain consistency)&hellip;</p>
+
+<p>Ruby&rsquo;s ecosystem is certainly doing a lot of hard work to stay current. If you use Rubinius or JRuby, you can leverage a ridiculously powerful library called <a title="Celluloid" href="https://github.com/celluloid/celluloid" target="_blank">celluloid</a>, plug in <a title="celluloid-io" href="https://github.com/celluloid/celluloid-io" target="_blank">celluloid-io</a> and use <a title="reel webserver" href="https://github.com/celluloid/reel" target="_blank">reel</a>, a webserver based on celluloid-io. Here&rsquo;s the quick blurb on celluloid-io: <em>Celluloid::IO provides an event-driven IO system for building fast, scalable network applications that integrates directly with the Celluloid actor library, making it easy to combine both threaded and evented concepts. Celluloid::IO is ideal for servers which handle large numbers of mostly-idle connections, such as Websocket servers or chat/messaging systems.</em></p>
+
+<p>Oh, and I haven&rsquo;t mentioned the cherry on top of the cake yet! <a title="Opal" href="https://github.com/opal/opal" target="_blank">Opal</a> is a ruby to javascript source-to-source compiler. It also has an implementation of the ruby corelib. It has come a REALLY long way. It passes a large amount of tests from the Ruby specs. You can write jquery with it. You can write CSS with it. In short, it is pretty close to making Ruby into the one-stop-shop for web apps: it allows you to create objects which are representations of what you see on the screen. No more do you have to separate your HTML from your CSS or your Javascript. Check out slide 339 of the <a title="Opal - A new hope slideshow" href="http://www.slideshare.net/fkchang/opal-a-newhope/339" target="_blank">Rubyconf presentation</a> to see an example. And feel free to check out the entire presentation, there&rsquo;s lots of goodies.</p>
+
+<p>In short, Ruby&rsquo;s doing pretty well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sparring]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/05/15/sparring/"/>
+    <updated>2013-05-15T21:05:17-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/05/15/sparring</id>
+    <content type="html"><![CDATA[<h1>What Sparring Is</h1>
+
+
+<p>Sparring is a playful and explorative interaction.</p>
+
+<p>Sparring is an exercise, a drill. The Japanese use the word KUMITE &ndash; which basically means &ldquo;grouped hands&rdquo; or &ldquo;pair hands&rdquo;, &ldquo;joined hands&rdquo;, &ldquo;hands together&rdquo; (the Wikipedia article suggests &ldquo;grappling hands&rdquo;).</p>
+
+<p>Sparring is a two-person free-form exercise wherein you get to examine scenarios involving combinations, footwork, distancing, rhythm, controlled power, and focus to improve yourself and your partner.</p>
+
+<p><a id="more"></a><a id="more-355"></a></p>
+
+<p><strong>Combinations</strong>: you get to play first-hand with things you have learned and put them in an environment where there is no set response. You learn what the combination does and what it does not do. You get a feel for when to use it, when not to use it. You will also learn not to stop after a single strike. WOOHOO you got a strike in! So what? Get in another one and another one! Learn how to use feints and setups for your combinations.</p>
+
+<p><strong>Footwork</strong>: sliding along a line, stepping around. When to change your front foot, when not to. When to step, when not to. This is harder than it sounds when you only have a split-second to make the decision.</p>
+
+<p><strong>Distancing</strong>: You can draw two concentric circles around an immobile person, representing the reach of their arms and legs. You learn how far your strikes go depending on your stance, you learn when the opponent is entering your zone and when they&rsquo;re dancing just outside of it. You learn where your partner&rsquo;s zone is. You will learn to enter and leave the opponent&rsquo;s zone, <em>and when to do so</em>.</p>
+
+<p><strong>Rhythm</strong>: people have a rhythm (let&rsquo;s leave the no-rhythm stepping of the Fremen out of this for a second). Controlling the fight can be done by means of controlling this rhythm. Anything you do between those beats is either invisible or unavoidable to the person. Someone who is jumping up and down is most vulnerable right before they land. Someone who takes a step forward is vulnerable when they are transferring the weight to the foot if it&rsquo;s still up in the air.</p>
+
+<p><strong>Power</strong>: sparring is not about power generation, because unless your partner is much better than you are, you&rsquo;re eventually going to hurt your partner, and they&rsquo;re not going to want to train with you again, which probably defeats the whole purpose, because when you run out of training partners, you&rsquo;ve got no one to spar with. If both players have a solid understanding and agreement, then you CAN use power. I&rsquo;ve been in a few very fun sparring matches like that, very exhilarating experiences where the speed and the power was way up. Because both of us were playing and exploring, and we had a clear agreement and understanding on the goal of the drill, it was fine. You can and should develop power &ndash; however, this is done with other drills.</p>
+
+<p><strong>Focus</strong>: Alright, so we are not going to use full power. <strong>We&rsquo;re still going to throw quick and precise strikes and we&rsquo;re still going to make solid contact.</strong> While we&rsquo;re not doing point-sparring, we&rsquo;re still sparring, and a solid strike counts as a strike that could have been much more powerful; in proper point sparring, that&rsquo;s a point &ndash; not touching someone with your toe. So, you should always honor the strike as being a real strike if it had the proper focus/kime, etc. It&rsquo;s of course OK to smack down a round-house that made contact weakly, because it would have just been a touch. That is part of the contract. &lsquo;Contact&rsquo; does not mean &lsquo;hit&rsquo; if it does not have focus.</p>
+
+<p>Now, having said all this, full-contact sparring has all the same things, but they don&rsquo;t limit the power. <strong>Full-contact, full-speed sparring is practiced in systems where significant body conditioning occurs. This is not a coincidence.</strong></p>
+
+<h1>What Sparring Is Not</h1>
+
+
+<div>Sparring is not a fight. Sparring is not a competition. If you or your partner try to win, then the purpose of the drill is defeated.</div>
+
+
+<p>If you consider sparring to be a practice fight, then all of a sudden it&rsquo;s OK to hurt someone &ndash; because that&rsquo;s what you&rsquo;re practicing. Sure, it&rsquo;s not knitting class, but sparring is not about hurting someone. And it&rsquo;s not about winning.</p>
+
+<p>Why are we wearing gloves? Headgear? A mouthpiece?  These aren&rsquo;t excuses to hit someone harder. They are there to protect YOUR body, not the opponent&rsquo;s. They are worn by both people because you are training something dangerous, in which mistakes happen. The Pavlovian response to putting on gloves should not be &ldquo;Yeah! Time to waste something!&rdquo;, it should be &ldquo;Time to make sure I am fully alert.&rdquo;</p>
+
+<p>There are two excellent articles coming from the world of the Russian martial art called Systema. The first is called <a title="The Kickboxing Trap" href="http://russianmartialart.org/ikfkicktrap.html" target="_blank">The Kickboxing Trap</a>. It talks about the following three traps:</p>
+
+<ol>
+    <li><em>Trying NOT to lose</em> (which is not exactly trying to win, but equally dangerous and much more subtle)</li>
+    <li><em>Trying to move faster than the opponent </em>(in Systema, sparring is done at a slower speed)</li>
+    <li><em>Having undefined goals</em> (WHY are you sparring? Which aspect of your practice are you working on improving?)</li>
+</ol>
+
+
+<p>You should go read it.</p>
+
+<p>The second article is called <a title="Slow Sparring Game of Russian Martial Arts" href="http://www.dojoofthefourwinds.com/sparring.html" target="_blank">Slow Sparring Game Of Russian Martial Arts</a>. I will give an excerpt here to give you an idea of a particular and very effective method of sparring (I know this from experience). In the following excerpt, emphasis is mine.</p>
+
+<blockquote>The basic premise of the Slow Sparring Game (SSG) is <strong>to create an environment where all technical aspects of hand to hand combat can be explored in relative safety</strong>, while providing the body a chance to execute and cultivate true spontaneity. To facilitate this, the <strong>SSG must be viewed as a slow motion representation of combat</strong>.</blockquote>
+
+
+<p>Here are some things it talks about:</p>
+
+<ol>
+    <li><span style="line-height: 13px;">Changing speed, whether speeding up or slowing down during the movement</span></li>
+    <li>Changing trajectory, just because you can when you&#8217;re going slow</li>
+    <li>The defender moving faster than the attacker</li>
+</ol>
+
+
+<p>You should go read it.</p>
+
+<div></div>
+
+
+<div>
+<h1>How to get good at sparring</h1>
+There&#8217;s no secret, no magic formula. You gotta spar. <strong>You have to spar while being fully alert and cognizant of all those things</strong>. What if you&#8217;ve learned to spar already, but what you really learned was how to beat down (or how to be afraid of the other person) ? Then you have to spend time being extra-aware, with partners who will be understanding, and you probably should slow down even more than you otherwise would, because I can guarantee you from experience that you&#8217;ll speed up, because you&#8217;ll get afraid or uncomfortable or angry or competitive. It happens. And it&#8217;s nothing to be ashamed about. People make mistakes. We all do. But you have to be in there with the intent of improving and helping your partner improve, with an open mind.
+<h1>What if someone breaks the agreement?</h1>
+This, for better or for worse, depends on the culture in your environment.
+
+If they break the agreement because they are trying to fix their habits, be patient, take breaks, talk to them. Be aware of when they get scared or uncomfortable and ease up on the pressure.
+
+If they break the agreement because they don&#8217;t believe in it, then I would say, don&#8217;t spar with them. Have them read this blog post and have a conversation with them about it. Send them to a Systema school for a little while so they learn that speed and power aren&#8217;t the main elements in a fight. Or, if you&#8217;re much better than they are, let them get frustrated and angry and beat themselves against the wall. Eventually they&#8217;ll get tired of fighting. Every once in a while, people meet a problem and they have to burn all their Yang before they realize that it&#8217;s easier to be Yin.
+<h1>Other Valuable Information</h1>
+<h2></h2>
+<h2>Teacher-student relationships when sparring</h2>
+Sparring can be a very effective teaching tool: you can give students the proper positive feedback for a good strike, and the proper feedback (or lack thereof) for an improper strike. You can teach them to find openings, to think in circles (or spheres), to recognize rhythm. And if you&#8217;re really good - you&#8217;ll do it without speaking. You can choose to interrupt the sparring regularly to examine the current situation at more leisure. Sometimes it&#8217;s necessary to slow things down.
+<h2>Differences in experience levels</h2>
+<em>The more-experienced player should only ever answer with 80% of the power of the less-experienced player.</em> The more-experienced player should not be punishing or otherwise bullying the lower-experienced player. There are further lessons to be learned there by the more-experienced player, which I will not discuss here, because it might be a spoiler, and some of this stuff you really should learn by doing.
+<h2>What not to learn from watching high-experience players</h2>
+Higher-experience people who are sparring together may seem to be ignoring such strikes, most likely because they&#8217;re working on other things, like the focus, the rhythm, the continuity of motion, etc., it does not mean it is OK to ignore these strikes. They are (or should be) acknowledging the strikes, storing the experience in memory to learn from it later, and continuing.
+<h1>Conclusion</h1>
+Sparring is, or should be, a very enjoyable activity. It is a time where you can learn much about yourself and about your opponent (cue <a title="Seraph vs. Neo" href="http://www.youtube.com/watch?feature=player_detailpage&amp;v=TDhLXkRhg60#t=90s" target="_blank">Matrix reference</a> - I was the only one laughing in the theater when this happened&#8230;). It is a time where you drop all pretenses, drop your ego, and just get to be, along with your partner. My best friends are my best sparring partners, and this is not a coincidence.
+
+Proper sparring requires a set of agreements between all parties, and tremendous mindfulness. Thankfully, the payoffs are huge. With proper sparring, you will grow intellectually and emotionally and, if that&#8217;s not enough for you, your martial skills will also improve
+
+Much can be learned during sparring. Usually after the fact. I can think of a handful of occasions where something happened and, during a pause, one of us said &#8220;Oh, that move came from kata X&#8221; or &#8220;I&#8217;ve been practicing Y and I had no idea what it was for - now I do!&#8221;
+
+So, to steal unashamedly from a great man&#8230; <a title="UnderstandGoodPlay - the book" href="http://www.bushinbooks.com/about.html" target="_blank">Understand? Good. Play!</a>
+
+</div>
+
+
+<p>Collapse this post</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[School Creed]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/04/27/school-creed/"/>
+    <updated>2013-04-27T19:58:04-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/04/27/school-creed</id>
+    <content type="html"><![CDATA[<p>In the dojo where I spent my formative years as a martial artist, there is a school creed. A quick search online has revealed that many schools have a similar creed. Every class says it as we begin, after bowing in, before calisthenics. I hear it and/or say it about three times per dojo night.</p>
+
+<p>It&rsquo;s a simple creed, and clearly not unique. Here&rsquo;s what it says:</p>
+
+<blockquote>I intend to develop myself in a positive manner
+and avoid anything that would reduce my mental
+growth or physical health.
+I intend to develop self-discipline, in order to
+bring out the best in myself and others.
+I intend to use what I learn in class
+constructively and defensively, to help myself
+and others and never be abusive or offensive.
+
+&nbsp;</blockquote>
+
+
+<p>Kids and adults alike learn this creed and repeat it, together. All are taught to pronounce it powerfully, in the manner of an assertion. In that way, it is very similar to the few sentences American children have to repeat in their schools at the beginning of each day, and which sickened me for how similar it was to unadulterated brainwashing. Speaking of which, <a title="The Kafka Shuffle" href="http://the-programmers-stone.com/2008/01/05/the-kafka-shuffle/">this</a> is a very interesting and potentially disturbing read on the reading materials in school, but I digress.</p>
+
+<p>Why do we make people repeat these words? We sometimes ask kids if they know what some words in there mean, like self-discipline. But certainly we&rsquo;re not teaching vocabulary to adults. So what&rsquo;s the point?</p>
+
+<p>Well, the point is practice. These sentences are to be pronounced not only as assertions, but mindfully, pronouncing your desire to grow in that direction. They are simple precepts:</p>
+
+<ol>
+    <li><span style="line-height: 13px;">Always aim for the things in life that will allow you to grow, always avoid the things that will make you shrink. Trick: sometimes you have to shrink in order to grow. Are those decisions mistakes? Are they following this code?</span></li>
+    <li>Always try to be the best you can be, always try to allow others around you to be the best they can be. Trick: can you do both at the same time? Do you sometimes have to not be the best you can be to prod people into being the best they can be?</li>
+    <li>What you are learning martially is meant for good. Possibly along the path of the Life-Giving Sword, but not necessarily. Simple application: don&#8217;t get into bar fights. Trick application: everything you do must come from Love.</li>
+</ol>
+
+
+<p>&nbsp;</p>
+
+<p>This is intentionally left a little vague. Find your own questions. I&rsquo;ll answer.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add a User to the Wheel Group in OSX]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/02/07/add-a-user-to-the-wheel-group-in-osx/"/>
+    <updated>2013-02-07T10:46:25-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/02/07/add-a-user-to-the-wheel-group-in-osx</id>
+    <content type="html"><![CDATA[<p>Why are these things always so weird? Someday I&rsquo;ll understand why OSX is set up that way. And on that day, I&rsquo;ll probably weep.</p>
+
+<blockquote>$ sudo /usr/bin/dscl . -append /groups/wheel GroupMembership <em>username</em>
+<p style="padding-left: 30px;"></p>
+</blockquote>
+
+
+<p>This was found here : <a href="https://discussions.apple.com/thread/1230828?start=0&amp;amp;tstart=0">https://discussions.apple.com/thread/1230828?start=0&amp;amp;tstart=0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is Rails Dying?]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/02/02/is-rails-dying/"/>
+    <updated>2013-02-02T17:29:28-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/02/02/is-rails-dying</id>
+    <content type="html"><![CDATA[<p>More to the point, should Rails die?</p>
+
+<p>Rails brought a lot of great things &ndash; it made it dumb easy to package an entire app together. It abstracted the complexity of the storage layer. It created an entire market. Things like Heroku, Railsonfire/codeship and other companies turned a profit by extending the benefits of Rails. And things like Capistrano were born.</p>
+
+<p>Everything that can be automated should be automated.</p>
+
+<p>&nbsp;</p>
+
+<p>This has brought great things. And people wrote more tests, and life was good. But then, Rails apps grew, and people realized they had written them badly &ndash; because they interleaved their code within Rails, instead of using Rails as a layer and building their code on top of it, carefully segmenting the access points to that layer. Gosh, that sounds like work! Enter things like Avdi Grimm&rsquo;s Object On Rails. And the Rails community re-learns things that the Java community has suffered through and grown past. Dependency Injection is making a comeback, Ruby-style. People use TDD as an indicator of design smells &ndash; if you have to boot up Rails to run your tests, you&rsquo;re doing something wrong! Although of course SOME tests require the entire Rails stack, but we call these Capybara tests, because &ldquo;end-to-end&rdquo; is ugly, and capybaras are much prettier to look at.</p>
+
+<p>And then, on the other hand, you have Sinatra, and Backbone.js, and other things that are focused on doing one thing and doing it well.</p>
+
+<p>Now we have everything that Rails has taught the Ruby world &ndash; segment your logic, stay away from expensive code (the only currency here is time, and this is a very important thing to realize). Your TDD loop should be very short &ndash; you can watch some of Gary Bernhardt&rsquo;s screencasts on Destroy All Software to learn mor about this. We have Capistrano, and Capybara. We have RSpec. We have Opal, a Ruby-to-Javascript compiler.</p>
+
+<p>And in case Opal is too weird for you, you&rsquo;ve got the Backbone.js world, where you have to make all these exact decisions over again.</p>
+
+<p>You&rsquo;ve got Sinatra, a wonderful &ldquo;controller&rdquo;. Sinatra is a great place to put your API and test it. Because that is the only thing Sinatra gives you, you feel the pain every time you add something &mdash; you have to add it.</p>
+
+<p>And your storage is now distributed. Imagine &hellip; Backbone.js front-end, Sinatra in the middle, and your distributed storage of choice on the other side: Google Drive, Apple Cloud, Dropbox, MediaFire &hellip; You pick it, you store to it. Users now carry their data everywhere. Virtually speaking, of course. Gosh, sounds like you&rsquo;re even reducing costs.</p>
+
+<p>&nbsp;</p>
+
+<p>So now, we face the challenge the health world has been trying to solve for over a decade &ndash; how do you share information between proprietary systems? After all, the user is the one who&rsquo;s suffering.</p>
+
+<p>This is an entirely different blog post &ndash; how much of &ldquo;your&rdquo; data really is yours? How much could be shared? You know.. Like one of those virtual business cards, I suppose. You&rsquo;d have a JSON object behind a secure server where the user stores THEIR information, and you ask for permission to read that one object.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby: Gem Ffi on OSX Mountain Lion 10.8]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/08/21/ruby-gem-ffi-on-osx-mountain-lion-10-8/"/>
+    <updated>2012-08-21T12:38:30-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/08/21/ruby-gem-ffi-on-osx-mountain-lion-10-8</id>
+    <content type="html"><![CDATA[<p>EASY!</p>
+
+<p>sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2</p>
+
+<p>&nbsp;</p>
+
+<p>That&rsquo;s it. You can now install ffi 1.5.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hear No Evil. See No Evil. Speak No Evil.]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/07/12/hear-no-evil-see-no-evil-speak-no-evil/"/>
+    <updated>2012-07-12T22:00:57-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/07/12/hear-no-evil-see-no-evil-speak-no-evil</id>
+    <content type="html"><![CDATA[<p>I had an epiphany tonight about something that just about everyone knows: the three monkeys. And I wanted to share it with you.</p>
+
+<p>The three monkeys are accompanied by the words: &ldquo;See no evil. Hear no evil. Speak no evil.&rdquo; The funny thing is that one monkey is covering his eyes, one monkey is covering his ears, and one monkey is covering his mouth! Let&rsquo;s examine that for a second.</p>
+
+<p>See no evil &ndash;&gt; Don&rsquo;t look
+Hear no evil &ndash;&gt; Don&rsquo;t listen
+Speak no evil &ndash;&gt; Don&rsquo;t talk</p>
+
+<p>That&rsquo;s kind of an odd transposition, isn&rsquo;t it? How does it work?
+Well, it doesn&rsquo;t. That&rsquo;s the point. They&rsquo;re monkeys: they&rsquo;re not people. They misunderstand. They figure that the easiest way to see no evil is to close your eyes: that way you can&rsquo;t see the evil that people do. They figure you should just not listen: so you can&rsquo;t hear the evil people say. And they figure the safest thing to do is not talk: it means you can&rsquo;t say anything evil.</p>
+
+<p>But if you go through life with your eyes closed, your ears closed, and your mouth closed, you&rsquo;re not a good part of society. Your mind isn&rsquo;t working, and you&rsquo;re going to miss on the beauty of life.</p>
+
+<p>Here&rsquo;s the trick.</p>
+
+<p>See no evil and hear no evil have to do with the same thing: it&rsquo;s not WHAT you see/hear, it&rsquo;s HOW you see/hear. Don&rsquo;t judge. Speak no evil has to do with what&rsquo;s inside of you too: why are you saying what you&rsquo;re saying?</p>
+
+<p>Hearing and Seeing are receiving actions, but Speaking is an emitting action. You can influence others with that action, and so you must be sure your words aren&rsquo;t coming from negative thoughts.</p>
+
+<p>So hang on, how can we straighten this out? If we&rsquo;re not judging what&rsquo;s coming in, why are we judging what&rsquo;s coming out? Well, here&rsquo;s the next trick: you&rsquo;re not JUDGING. You&rsquo;re accepting. Seeing, Hearing and Speaking: these are yin and yang manifestations of love. Basically, you should always act out of love. You should be love.</p>
+
+<p>What an odd sentence. &ldquo;You should be love&rdquo;. Unfortunately, this is pretty much where all the esoteric texts also stop, because it&rsquo;s one of those things you have to realize for yourself.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Schism in Martial Training Paradigms]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/06/19/the-schism-in-martial-training-paradigms/"/>
+    <updated>2012-06-19T21:52:17-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/06/19/the-schism-in-martial-training-paradigms</id>
+    <content type="html"><![CDATA[<h2>You&#8217;re training wrong! No, YOU&#8217;re training wrong!</h2>
+
+
+<p>A recent set of conversations have led me to examine the major difference in martial training. I&rsquo;m going to start by separating training in two categories, making an imperfect black-and-white model of the martial world:</p>
+
+<ul>
+    <li>Traditional eastern training</li>
+    <li>Jeet Kune Do-like training</li>
+</ul>
+
+
+<p>Now, let&rsquo;s start to talk about the <em><strong>PURPOSE</strong></em><strong><em> </em></strong>of each, in a fairly roundabout way.</p>
+
+<p>Let&rsquo;s talk about the traditional drill which has become sort of a standard: &ldquo;Grab my wrist&rdquo;. The joint lock. Many people have images of rows of people in white uniforms with colored belts, all standing there, grabbing one of their partner&rsquo;s wrists, and waiting. Then the partner tries to do some kind of fancy something-or-other and ideally, the person grabbing the wrist is now very sorry for themselves.</p>
+
+<p>Well, there&rsquo;s a clear problem with that drill, isn&rsquo;t there? In fact, there&rsquo;s a LOT of problems. Let&rsquo;s talk about them.</p>
+
+<h2>1. Who in their right mind would grab someone&#8217;s wrist?</h2>
+
+
+<p>Okay, good point. You win. It&rsquo;s a silly drill. No, but seriously &ndash; superficially, that&rsquo;s dumb, unless maybe you were trying to take some weaker person away with you &ndash; and in that case, you&rsquo;d also want to make sure they weren&rsquo;t making sound. So, why grab someone&rsquo;s wrist?</p>
+
+<p>Let&rsquo;s look at it a little differently. People use their hands often, every day, for a number of fairly varied tasks. They use their hands with purpose, like grabbing a mug, drinking from it, driving, texting, typing on a keyboard, opening a door&hellip; People are used to relating to the world through their hands. It is more natural than, say, lying down on the ground and trying to get a knee or ankle lock on someone with both of your feet, so it is an easier starting point. So there&rsquo;s the grabbing part.</p>
+
+<p>Why the wrist? Well, actually, use the exact same argument as the last paragraph. People relate better to what they feel near their hands, they already have a relatively solid mind-body connection there, so new movements can be put together with fewer mental leaps. You can feel the resistance, in any direction, more easily. You can &lsquo;listen&rsquo; more easily with your hands than, as a beginner, you can with other, bigger, less-trained muscles.</p>
+
+<h2>2. Why grab someone&#8217;s wrist and let them do whatever they want?</h2>
+
+
+<p>Yeah, I mean, why? They&rsquo;re gonna start moving your hand, arm, wrist, elbow, shoulder, body, this way and that, and you&rsquo;re just gonna let it happen? What kind of an idiot are you?</p>
+
+<p>Well, for starters, as the person portraying the &lsquo;attacker&rsquo;, it is not currently your role to beat up the other person. See, they are the receiver, so it is their turn to practice, with comfortable slowness and smoothness, a potentially complex move which may require subtle manipulation (moving the body in just the right way to get the desired result). So you should let them experiment until they are comfortable with the move. That&rsquo;s the whole point. Maybe now is a good time to explain why people need to get comfortable &ndash; the stuff that you&rsquo;re practicing actually can hurt you. I know, kind of a shocker, right? Performed improperly, on an opponent that is trying to resist, forcing to try and get the desired result, one can truly do long-lasting damage to a partner. The point of a partner is to train with them for a long time, so this defeats the purpose a bit.</p>
+
+<h2>3. Why grab someone&#8217;s wrist and not have a follow-up move?</h2>
+
+
+<p>I hear this all the time: if you&rsquo;re grabbing someone, you&rsquo;re probably pulling them into a punch with the other hand &ndash; or worse (knife, whatever). Yes. Great. Not for beginner practice. The previous point applies &ndash; people need to get comfortable with what they&rsquo;re doing FIRST.  Follow-up moves start to play with intermediate-to-advanced concepts which should only be brought in later, when both people have an understanding of when one has failed to apply the technique, so no useless forcing happens. Some of these concepts are stepping, angles, combinations,  directional shifts</p>
+
+<h2>4. Why stay locked when they have a lock on you?</h2>
+
+
+<p>This fourth point is a little subtle: locks are dynamic things. If someone puts you in a lock and they stop applying force in some direction, then you can move out of the lock. And again,</p>
+
+<p>&nbsp;</p>
+
+<p>Okay, so I waxed lyrical about the fact that the wrist grab is a beginner&rsquo;s move. Oh wait, no, I didn&rsquo;t. Hang on a sec.. What I said was that the most basic way of practicing the wrist grab, the safest way, the way that leads to growth, BASED ON THE TRADITIONAL TRAINING SYSTEM, is a static exercise, removing most of the variables of combat.</p>
+
+<p>Yeah&hellip; And then what? Well, once you&rsquo;re comfortable with static, you begin to add energy to it, and that&rsquo;s when it truly comes alive. Pull, push, add a strike, add a step.. All those things get practiced until the student is comfortable. And then what? Are you gonna start sparring and suddenly grab someone&rsquo;s wrist? Well&hellip; Probably not. You&rsquo;d probably end up getting punched in the face, and you&rsquo;d deserve it, too.</p>
+
+<p>The neat thing about this practice is that it teaches you to feel how someone else applies their force in a direction (for which I will use the word &lsquo;energy&rsquo; from now on). The tricky thing about this practice is that it only works by surprise. And the hard thing about it is that you can really mess up someone&rsquo;s body if you do it suddenly enough.</p>
+
+<p>Yeah.. But wait! I just said you weren&rsquo;t gonna do it when sparring! Well, no, you&rsquo;re not. But if you are going to do it, someone will have grabbed you &mdash; or sent energy in some shape in your direction (e.g. a punch), and that will be your answer. It will be swift, it will be sudden, and with the correct precision, it will send the poor sod on the floor. And what if it fails? Well, you can run, you can try to hit the guy a lot, or you could go for the subtler option, which requires more years of training &ndash; switch to another lock on the next available joint.</p>
+
+<p>&nbsp;</p>
+
+<p>Okay, now I bet you&rsquo;re saying that I&rsquo;m just giving you the runaround. I talked about purpose, somewhere way above, and I haven&rsquo;t mentioned anything about it since! That&rsquo;s true. But I was also setting up the stage. What is the purpose of the traditional training? The purpose of traditional training is <strong>NOT</strong> to make you an efficient fighter <strong>QUICKLY</strong>. Traditional training should be making you look inward and discover the connection between your mind and body, helping you discover who you really are and what your illusions are. As the training progresses, it gets increasingly hard and subtle, therefore refining you and your understanding of your place in society through the study of conflict.</p>
+
+<p>Gosh, so many big words. How much what I just said is true? Eh&hellip; Nowadays, it depends on the student.</p>
+
+<p>&nbsp;</p>
+
+<p>Someone I was talking to recently compared &ldquo;grab the wrist&rdquo; to &ldquo;we can both throw jabs and our only defense is slipping&rdquo;.</p>
+
+<p>Well, let&rsquo;s apply the same concepts &ndash; though I won&rsquo;t make as big a deal of them since you saw them above.</p>
+
+<p>1) Why would you just jab? Well, why not. Maybe you can knock the guy out, or explode his nose, or just jab four times before he realizes you&rsquo;re taking the initiative / preempting. It&rsquo;s a strike and it&rsquo;s got chances to be effective. Besides, throwing multiple jabs is a good drill to build up your shoulder muscles and practice targeted striking!</p>
+
+<p>2) Why jab and let them do whatever they want? Well.. Alright, in this drill, we&rsquo;re not. We jab and they only get to slip. This is a strict drill, working hips, legs, maybe stepping, maybe parrying with the hands. This is all good stuff.</p>
+
+<p>3) Why jab and not have a follow-up move? Well, because it&rsquo;s a drill, duh! We&rsquo;re just doing this over and over, working on very specific skills that directly and obviously relate to what I call a level one confrontation: strikes. Hell, it&rsquo;s worked for boxers. Nah.. This analogy is flawed. Boxers don&rsquo;t use their legs for anything but power generation. No kicks, no trips.</p>
+
+<p>4) Why not counter when you slip? Well.. That would end the drill, and it&rsquo;s not the point. You&rsquo;d have a drill for counters. These drills are, of course, just as artificial as &ldquo;grab my wrist&rdquo;. The thing is, some people like them better. They need to move.</p>
+
+<p>&nbsp;</p>
+
+<p>In general, I&rsquo;ve found the camp to be split between people who prefer the &ldquo;grab my wrist&rdquo; context and people who prefer &ldquo;jab and slip&rdquo;. Both drills get practiced by both people, colored by the environment, but one side matches their personality better. &ldquo;Grab my wrist&rdquo; is not realistic! They say. &ldquo;Jab and slip&rdquo; doesn&rsquo;t develop your sensitivity! They say.</p>
+
+<p>Here&rsquo;s what one guy had to say about it.. You may have heard of him, his name is Bruce Lee, and he wrote that book called &ldquo;Tao of Jeet Kune Do&rdquo;:</p>
+
+<blockquote>&#8220;Instead of facing combat in its suchness, then, most systems of martial art accumulate a &#8220;fancy mess&#8221; that distorts and cramps their practitioners and distracts them from the actual reality of combat, which is simple and direct. Instead of going immediately to the heart of things, flowery forms (organized despair) and artificial techniques are ritualistically practiced to simulate actual combat. Thus, instead of &#8216;being&#8217; in combat these practitioners are &#8216;doing&#8217; something &#8216;about&#8217; combat.
+&#8220;Worse still, super mental power and spiritual this and spiritual that are desperately incorporated until these practitioners drift further and further into mystery and abstraction. All such things are futile attempts to arrest and fix the ever-changing movements in combat and to dissect and analyze them like a corpse.&#8221; (p. 14)
+&#8220;Forms are vain repetitions which offer an orderly and beautiful escape from self-knowledge with an alive opponent.&#8221; (p. 16)</blockquote>
+
+
+<p>While I agree with some of it, I think there is a fundamental flaw in trying to reject such static training: it develops a fundamental and critical awareness and sensitivity which becomes reflexive over time. I&rsquo;ve watched a 70+ year-old man move another guy around like a volley ball with impressive speed and precision, and his training had been extremely traditional (though, granted, over a period of fifty years or more).</p>
+
+<p>&nbsp;</p>
+
+<p>I think that when people criticize a drill, they&rsquo;re really criticizing instructors who have no understanding of the depth of the drill &ndash; or, reflexively, criticizing themselves for not having a deep enough understanding of the drill, an unwillingness to practice. <em>No think. No talk. Train.</em></p>
+
+<p>On that note, I stop my tongue-fu.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Devise + Rspec Error: Undefined Method 'Name']]></title>
+    <link href="http://blog.trevoke.net/blog/2012/06/11/devise-rspec-error-undefined-method-name/"/>
+    <updated>2012-06-11T10:14:58-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/06/11/devise-rspec-error-undefined-method-name</id>
+    <content type="html"><![CDATA[<p>If you&rsquo;re using Devise and rspec on Rails 3, and you want to override a controller, and you end up with an error that makes no sense whatsoever:</p>
+
+<p><code>Undefined method 'name' for nil:NilClass</code>, well then, you probably want to add the following line to your tests:</p>
+
+<figure class='code'><figcaption><span>linenos:false</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="vi">@request</span><span class="o">.</span><span class="n">env</span><span class="o">[</span><span class="s2">&quot;devise.mapping&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="no">Devise</span><span class="o">.</span><span class="n">mappings</span><span class="o">[</span><span class="ss">:admin</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yeah&hellip; That took me way longer than expected.</p>
+
+<p>On a COMPLETELY UNRELATED SIDE NOTE, pry is pretty cool when you end up having to step through code&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Tooth of Knowledge (Lyrics)]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/04/26/the-tooth-of-knowledge-lyrics/"/>
+    <updated>2012-04-26T21:32:16-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/04/26/the-tooth-of-knowledge-lyrics</id>
+    <content type="html"><![CDATA[<p>This song is at least as old as 1973 and is originally from Italy (Giorgio Gaber &ndash; Dente della conoscenza). If you like finding patterns, making analogies and metaphors, and overall pondering, then examine the tooth of knowledge in the contexts of: science, religion, culture, society (etiquette, etc), and finally, the internet.</p>
+
+<p>&nbsp;</p>
+
+<p>(note : &lsquo;SHHH&rsquo; is an inhaling sound)</p>
+
+<p>‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>In a random place, you can say anywhere,
+it really seems that a child was born,
+it&rsquo;s a normal child, not very special,
+except for the fact that it has a strance tooth
+and he does ‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>Neither the mom or the doctors know what it is,
+it&rsquo;s not foreseen by science,
+To understand one another we&rsquo;ll call this anomaly
+The Tooth of Knowledge.</p>
+
+<p>‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>In his tower, all ivory,
+the genius studies his maps
+concentration, inspiration,
+his culture, his art.</p>
+
+<p>In a normal tooth there&rsquo;s no harm,
+but by some stroke of fate
+data tells us that other children were born
+all of them with the same tooth
+and they do ‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>There are those who say that this tooth is the guarantee
+of a precocious adolescence,
+they&rsquo;re allergic to their mother&rsquo;s milk
+but they suck up knowledge
+and they do ‘TICK’ and they do ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>In his tower, the genius studies
+the reason for these teeth,
+he looks at the problem technically
+and suggests they get removed.</p>
+
+<p>There they are in front of you with their small teeth,
+it really seems that your blood attracts them,
+they don&rsquo;t go to school, they don&rsquo;t read books,
+they give bites like the vampires do
+and they do ‘TICK’ and then ‘SHHH’,
+‘TICK’ and then ‘SHHH’.</p>
+
+<p>And when they suck, they learn everything you know,
+they level intelligence.
+Culture and its power are now in crisis
+with the Tooth of Knowledge.</p>
+
+<p>They&rsquo;ve surrounded even the tower,
+the genius screams that he doesn&rsquo;t want it,
+they sucked a bit of his blood,
+they haven&rsquo;t even hurt him,
+but now they already know everything that he does,
+He hadn&rsquo;t realized it
+he lost his power, he&rsquo;s a man like us&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using the Monaco Font With Rubymine on Linux]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/04/11/using-the-monaco-font-with-rubymine-on-linux/"/>
+    <updated>2012-04-11T12:36:43-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/04/11/using-the-monaco-font-with-rubymine-on-linux</id>
+    <content type="html"><![CDATA[<p>Here are the things you need to know about using any new font for Rubymine:</p>
+
+<ol>
+    <li>It needs to be <strong>Unicode</strong></li>
+    <li>It needs to go into the $JDK_HOME/jre/lib/fonts directory</li>
+</ol>
+
+
+<p>That is absolutely it. The last thing is the Monaco font, which <a href="http://trevoke.net/blog/wp-content/uploads/2012/04/Monaco.ttf_.zip">I have attached</a> for your downloading pleasure. It turns out DejaVu Sans Mono just isn&rsquo;t as nice &mdash; however nice it may be &mdash; and Inconsolata XL doesn&rsquo;t quite do it for me either.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby: What Is At_exit and How to Write Tests for It.]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/01/06/ruby-what-is-at_exit-and-how-to-write-tests-for-it/"/>
+    <updated>2012-01-06T11:35:03-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/01/06/ruby-what-is-at_exit-and-how-to-write-tests-for-it</id>
+    <content type="html"><![CDATA[<p>Ruby has a neat feature called at_exit which takes a block and then executes the contents of this block when the program ends. There are a couple of VERY important details:</p>
+
+<ol>
+    <li>It takes a block and converts it into a Proc object at the time of parsing. This means that the data has to be available in the binding, or you&#8217;ll run into errors. Example: instance variables need to be set before you can use them in that block. Better idea: don&#8217;t use instance variables in there at all.</li>
+    <li>You can &#8216;chain&#8217; at_exit calls, and they will be resolved in a First In, Last Out (FILO) order.</li>
+</ol>
+
+
+<p>Once you know this, using at_exit and writing tests for it becomes a little easier:</p>
+
+<p>[ruby]class Piddler
+   def initialize
+     create_pid_file
+   end</p>
+
+<p>   private</p>
+
+<p>   def create_pid_file
+     pid_file = &quot;/tmp/piddler/my_pid&quot; #Simplified for example purposes
+     File.new(pid_file, &lsquo;w&rsquo;)
+     at_exit { FileUtils.rm_f pid_file }
+   end
+end[/ruby]</p>
+
+<p>What you&rsquo;ll notice is that the at_exit block is defined RIGHT AFTER I create what I will need to resolve/undo/finish &ndash; not separately, right inside the method.</p>
+
+<p>&nbsp;</p>
+
+<p>[ruby]def test_clears_pid_file_when_it_exits
+   at_exit { assert_equal 0, Dir[&lsquo;/tmp/piddler/*].size}
+   Piddler.new
+end
+[/ruby]</p>
+
+<p>The advantage of that is that I know exactly when it gets defined. For this example, it gets defined at the end of the &lsquo;initialize &gt; create_pid_file&rsquo; call. This means that any at_exit blocks defined BEFORE that will be resolved AFTER.</p>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Art of Agile Planning / Art of Agile Delivery, by James Shore and Diana Larsen]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/11/02/art-of-agile-planning-art-of-agile-delivery-by-james-shore-and-diana-larsen/"/>
+    <updated>2011-11-02T12:44:46-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/11/02/art-of-agile-planning-art-of-agile-delivery-by-james-shore-and-diana-larsen</id>
+    <content type="html"><![CDATA[<p>The Art of Agile Planning (#aoap on Twitter, and AOAP from now on) is a 2-day course. The focus is on understanding the higher-level constructs of Agile and how they imbricate. In the course, one learns how the ideal Agile team is composed (hint: it&rsquo;s cross-functional and co-located) and what practices and techniques will be used to organize at all levels, from the developers&#8217; standup to the customers&#8217; research for the next best value-delivering feature, including how to properly create a feature that developers can work on and how to best break it down into stories (and then into tasks).</p>
+
+<p>The Art of Agile Delivery (#aoad on Twitter, and AOAD from now on) is a 3-day course. The focus expands from AOAP, both into further details in the iteration (how do developers best produce quality code without defects) and into further details for customers (how do we figure out who we seek and who we need to interact with).</p>
+
+<p>Both courses feature activities and mini-games to help accelerate and cement learning. Both courses, of course, feature James and Diana, whose presence is invaluable. It took me a day or two to get accustomed enough to start asking questions – don&rsquo;t wait, you only have those few days, and they can both bring great insight into whatever questions or problems you may have. Their first answer may be a little idealistic or snarky (I heard a once or twice “don&rsquo;t do that”), but after the chuckles die down, they go into further detail and, asking for clarifications where needed, they explain the ideal of the practice(s), skill(s) and/or technique(s) involved and how to try and rectify or adapt to a less-than-ideal situation. Among the small things that make this course great: there are slidebooks given, where the slide is on the left and there is room to take notes on the right, and there are &lsquo;facilitational aids&rsquo; (as Diana Larsen put it, “because toys aren&rsquo;t tax-deductible”) for those of us who need to fiddle with something to learn better.</p>
+
+<p>It is my understanding that both courses can be taken separately. I would probably not recommend doing so, as AOAD truly does build on top of AOAP. I will, however, echo James Shore&rsquo;s recommendation. Take care of yourself. Don&rsquo;t leave after each day and drink/party/work. Get some air, see your family, sleep. Give your body and your mind a rest. This course is five days and very intensive.</p>
+
+<p>I&rsquo;ve tried my best to give you the essence without the substance. Any description of the substance would simply be sub-par and ruin the experience. This course has to be lived. Besides, the course evolves based on the feedback it receives, so hopefully when you take the course, it&rsquo;ll be even better than when I took it!</p>
+
+<p>AOAD and AOAP together show that Agile truly is an organizational-scale operation, and can only have limited success if not applied at the manager and customer level.</p>
+
+<p>A last note – this course set can be taken with total strangers, but I took it as a training course with my entire company. They were people with whom I am used to working, people with whom I&rsquo;ll be talking about this course for long after it is over, and it allowed some slightly different dynamics to permeate the courses – in my eyes, for the better, but I&rsquo;m clearly biased.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rooting Incredible 2 With 2.3.3]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/09/04/rooting-incredible-2-with-2-3-3/"/>
+    <updated>2011-09-04T12:28:12-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/09/04/rooting-incredible-2-with-2-3-3</id>
+    <content type="html"><![CDATA[<p>If Revolutionary 0.4pre4 &mdash;
+Use WINDOWS! Broken on Linux.
+Follow this process: <a href="http://forum.xda-developers.com/showthread.php?t=1219246">http://forum.xda-developers.com/showthread.php?t=1219246</a></p>
+
+<p>revolution, for me, said &ldquo;oh sure, I&rsquo;ll install CWM for you&rdquo; and rebooted to Fastboot USB but did NOT actually install it. So you manually push it, then you choose &lsquo;bootloader&rsquo;, then &lsquo;recovery&rsquo; and THEN you are in CWM. And then Bob&rsquo;s your uncle.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTC Messed Up (Incredible 2, Missing Clock App)]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/08/31/htc-messed-up-incredible-2-missing-clock-app/"/>
+    <updated>2011-08-31T14:33:09-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/08/31/htc-messed-up-incredible-2-missing-clock-app</id>
+    <content type="html"><![CDATA[<p>I have a Droid Incredible 2 &ndash; and I&rsquo;m really enjoying it. I got an OTA update to 2.3 right about the time I was going to root it, so I thought, what the heck, I&rsquo;ll get Gingerbread. It&rsquo;s all I really wanted anyway.</p>
+
+<p>Last week, at some point, the clock app disappeared. I noticed because the alarm stopped ringing. It didn&rsquo;t really bother me, because sometimes I sleep through it &mdash; but then I checked and it&rsquo;s &hellip; not there. I mean, in &ldquo;Manage Apps&rdquo; it&rsquo;s there, with a size of 0, but it&rsquo;s not the app drawer.</p>
+
+<p>&hellip; There&rsquo;s a bug that causes the clock app to randomly appear / disappear. And it&rsquo;s been happening for about two months, based on the research I&rsquo;ve been doing.
+Someone on a forum said that if this happened on an iPhone, it&rsquo;d be in all the newspapers. They&rsquo;re right. iPhones are held to a different standard &mdash; and the standard should be the same. If Android wants to be taken seriously, then it&rsquo;s time to get some real development going behind it.</p>
+
+<p>And don&rsquo;t give me that crap about a single platform versus many platforms (different phones, etc). You&rsquo;re a distributor, you know your hardware. How come other ROMs are stable on YOUR hardware? Hmmmm ?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grepping a Single File for 'Dynamic' Content]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/08/31/grepping-a-single-file-for-dynamic-content/"/>
+    <updated>2011-08-31T14:22:14-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/08/31/grepping-a-single-file-for-dynamic-content</id>
+    <content type="html"><![CDATA[<p>You can use xargs to grep the same word through different files. But how do you use xargs to grep different words through the same file?
+Like this:</p>
+
+<p>echo &ldquo;your fancy word finder stuff here&rdquo; | xargs -i bash -c &lsquo;grep -n &ldquo;{}&rdquo; your/file/here&rsquo;</p>
+
+<p>Not something that&rsquo;s useful every day, but when you want it, hot damn is it nice to have.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Usage Conventions]]></title>
+    <link href="http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions/"/>
+    <updated>2011-08-30T12:46:12-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions</id>
+    <content type="html"><![CDATA[<p>We&rsquo;ve been using git at work for a greenfield project and, so far, this has worked for us. It could be a useful template to get another team started.
+We have gotten rid of the name &lsquo;master&rsquo;, which is only a convention anyway, and instead are using a few permanent branches:</p>
+
+<ul>
+    <li>production (only stable code which gets deployed to production goes there. The only branch to be merged in, EVER, is &#8216;stable&#8217;)</li>
+    <li>stable (only stable code which goes to the staging environment goes there. The only branch to be merged in, EVER, is &#8216;integration&#8217;))</li>
+    <li>integration (code from other branches goes here - tests should, of course, pass before merging in.)</li>
+</ul>
+
+
+<p>And then we have, of course, other branches for work in progress and other stuff. we&rsquo;ve used these prefixes to help with the naming, and called this the &lsquo;buffers&rsquo; convention (look at the first letters &ndash; BFRS):</p>
+
+<ul>
+    <li>bug_</li>
+    <li>feature_</li>
+    <li>refactor_</li>
+    <li>spike_</li>
+</ul>
+
+
+<div>How have you organized your git repositories?</div>
+
+]]></content>
+  </entry>
   
 </feed>

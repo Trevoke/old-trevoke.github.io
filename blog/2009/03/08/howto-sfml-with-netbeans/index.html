@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Howto: SFML With Netbeans - Seven Steps</title>
+  <meta name="author" content="Aldric “Trevoke” Giacomoni">
+
+  
+  <meta name="description" content="SFML, the Simple and Fast Multimedia Library, has tutorials for Code::Blocks, plain GCC, Visual Studio, but not Netbeans. Well, I like Netbeans. This &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.trevoke.net/blog/2009/03/08/howto-sfml-with-netbeans">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Seven Steps" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Seven Steps</a></h1>
+  
+    <h2>Martial Arts & Technology, oh my!</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.trevoke.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Howto: SFML With Netbeans</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-08T18:56:24-04:00" pubdate data-updated="true">Mar 8<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://www.sfml-dev.org/index.php">SFML</a>, the Simple and Fast Multimedia Library, has tutorials for Code::Blocks, plain GCC, Visual Studio, but not Netbeans. Well, I like Netbeans. This tutorial isn&rsquo;t perfect &ndash; the library names are fine for GNU/Linux and not for Windows, refer to the SFML howto for Windows to determine what library names to use. This will show you how to set up a Netbeans project to use SFML.<a id="more"></a><a id="more-80"></a>
+First things first &ndash; as I am running Gentoo on an x86_64 system (AMD64), I compiled the libraries myself. Don&rsquo;t forget to do that if that&rsquo;s your thing &ndash; I spent two evenings wondering why it wasn&rsquo;t working.</p>
+
+<p>First, go to Tools &gt; Options and find the C/C++ heading. If it&rsquo;s not there, you have to first create a C++ project to activate the feature. I have my SFML headers under &lsquo;/home/alg/workspace/SFML-1.4/include &ndash; replace that path with the INCLUDE path of wherever you downloaded the SFML libs. Don&rsquo;t use the &#8216;SFML&rsquo; subdirectory &ndash; use the &lsquo;INCLUDE&rsquo; directory.</p>
+
+<p>[caption id=&ldquo;attachment_81&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;475&rdquo; caption=&ldquo;Tools &gt; Options &gt; Code Assistance &gt; C++ Compiler&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/001.jpg"><img class="size-full wp-image-81" title="Enabling Code Assistance" src="http://trevoke.net/blog/wp-content/uploads/2009/03/001.jpg" alt="Tools &gt; Options &gt; Code Assistance &gt; C++ Compiler" width="475" height="295" /></a>[/caption]</p>
+
+<p>Next, on to the project itself. Right-click on the project in the project list and go to Properties.</p>
+
+<p>[caption id=&ldquo;attachment_82&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;321&rdquo; caption=&ldquo;Right click on project &ndash; go to properties&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/002.jpg"><img class="size-full wp-image-82" title="Project Properties" src="http://trevoke.net/blog/wp-content/uploads/2009/03/002.jpg" alt="Right click on project - go to properties" width="321" height="579" /></a>[/caption]</p>
+
+<p>Now, you need to be aware that there are at least two configurations &ndash; Debug and Release. Unless you want to debug output from SFML, you should change the Configuration to &ldquo;All Configurations&rdquo; so that both testing and release get affected by the following changes, otherwise when you compile the release.. It&rsquo;ll break and you may have forgotten why.</p>
+
+<p>[caption id=&ldquo;attachment_83&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;435&rdquo; caption=&ldquo;Configuration &ndash; All configurations&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/004.jpg"><img class="size-full wp-image-83" title="Configuration  - All Configurations." src="http://trevoke.net/blog/wp-content/uploads/2009/03/004.jpg" alt="Configuration - All configurations" width="435" height="113" /></a>[/caption]</p>
+
+<p>Go to Build &gt; C++ Compiler, and enter/select the SFML include directory in the &lsquo;Include Directories&rsquo; option.</p>
+
+<p>[caption id=&ldquo;attachment_85&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;785&rdquo; caption=&ldquo;Setting the project&#39;s include directories&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/003.jpg"><img class="size-full wp-image-85" title="Project include directories" src="http://trevoke.net/blog/wp-content/uploads/2009/03/003.jpg" alt="Setting the project's include directories" width="785" height="124" /></a>[/caption]</p>
+
+<p>The next and last step is to go to the linker and add the libraries themselves. The button on the right comes in very handy here.</p>
+
+<p>[caption id=&ldquo;attachment_86&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;736&rdquo; caption=&ldquo;On which line do we add it? The one that says Libraries!&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/005a.jpg"><img class="size-full wp-image-86" title="Linker window" src="http://trevoke.net/blog/wp-content/uploads/2009/03/005a.jpg" alt="On which line do we add it? The one that says Libraries!" width="736" height="149" /></a>[/caption]</p>
+
+<p>So, if you click on the three dots, you get the following window. I chose to store the libraries as full paths, it probably doesn&rsquo;t make a huge difference in the context of creating the program &ndash; but maybe in the outside world you just want to have the libraries in the same folder to make your life easier.</p>
+
+<p>[caption id=&ldquo;attachment_87&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;680&rdquo; caption=&ldquo;Adding libraries!&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/005b.jpg"><img class="size-full wp-image-87" title="Where the libraries are" src="http://trevoke.net/blog/wp-content/uploads/2009/03/005b.jpg" alt="Adding libraries!" width="680" height="130" /></a>[/caption]</p>
+
+<p>This should be all you need to do&hellip; Now you&rsquo;re on your own, all alone with the internet to help you. Happy hacking! Please let me know if anything is incorrect or if you have any additions to make.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Trevoke</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-08T18:56:24-04:00" pubdate data-updated="true">Mar 8<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/c-plus-plus/'>C++</a>, <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.trevoke.net/blog/2009/03/08/howto-sfml-with-netbeans/" data-via="Trevoke" data-counturl="http://blog.trevoke.net/blog/2009/03/08/howto-sfml-with-netbeans/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2009/02/24/relaxing-the-upper-body-aka-drop-your-shoulders/" title="Previous Post: Relaxing the upper body.. aka "drop your shoulders"">&laquo; Relaxing the upper body.. aka "drop your shoulders"</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2009/03/26/who-follows-who/" title="Next Post: Who follows who?">Who follows who? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/learning-and-fear/">Learning and Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/18/the-litany-against-fear/">The Litany Against Fear</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/15/sparring/">Sparring</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/Trevoke">@Trevoke</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'Trevoke',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Aldric “Trevoke” Giacomoni -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby Is Alive and Well]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well/"/>
+    <updated>2013-11-11T21:18:17-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/11/11/ruby-is-alive-and-well</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m back from Rubyconf.</p>
+
+<p>Some people say Ruby is dead. We can probably gloss over Zed Shaw&rsquo;s famous <a title="Zed Shaw's famous rant on the Rails community" href="http://web.archive.org/web/20080103072111/http://www.zedshaw.com/rants/rails_is_a_ghetto.html" target="_blank">rant</a>, since it&rsquo;s from roundabout 2007. My understanding is that the thought came about because of the many new trends in programming languages: first node, then Erlang&rsquo;s comeback and the birth of Elixir. Evented programming, non-blocking IO, all the fancy buzzwords, and everyone craps on Ruby&rsquo;s Global Interpreter Lock.</p>
+
+<p>Given the talks at Rubyconf, Ruby is most likely not dead (and our internal rubylist has an ongoing recent conversation about this if you&rsquo;re curious). There were talks on API design, on fault-tolerant data, on machine-learning, on parallel execution and concurrency, a talk on <a title="Raft: a blog entry with links and stuff" href="http://highscalability.com/blog/2013/8/7/raft-in-search-of-an-understandable-consensus-algorithm.html" target="_blank">Raft</a> (an algorithm to obtain consistency)&hellip;</p>
+
+<p>Ruby&rsquo;s ecosystem is certainly doing a lot of hard work to stay current. If you use Rubinius or JRuby, you can leverage a ridiculously powerful library called <a title="Celluloid" href="https://github.com/celluloid/celluloid" target="_blank">celluloid</a>, plug in <a title="celluloid-io" href="https://github.com/celluloid/celluloid-io" target="_blank">celluloid-io</a> and use <a title="reel webserver" href="https://github.com/celluloid/reel" target="_blank">reel</a>, a webserver based on celluloid-io. Here&rsquo;s the quick blurb on celluloid-io: <em>Celluloid::IO provides an event-driven IO system for building fast, scalable network applications that integrates directly with the Celluloid actor library, making it easy to combine both threaded and evented concepts. Celluloid::IO is ideal for servers which handle large numbers of mostly-idle connections, such as Websocket servers or chat/messaging systems.</em></p>
+
+<p>Oh, and I haven&rsquo;t mentioned the cherry on top of the cake yet! <a title="Opal" href="https://github.com/opal/opal" target="_blank">Opal</a> is a ruby to javascript source-to-source compiler. It also has an implementation of the ruby corelib. It has come a REALLY long way. It passes a large amount of tests from the Ruby specs. You can write jquery with it. You can write CSS with it. In short, it is pretty close to making Ruby into the one-stop-shop for web apps: it allows you to create objects which are representations of what you see on the screen. No more do you have to separate your HTML from your CSS or your Javascript. Check out slide 339 of the <a title="Opal - A new hope slideshow" href="http://www.slideshare.net/fkchang/opal-a-newhope/339" target="_blank">Rubyconf presentation</a> to see an example. And feel free to check out the entire presentation, there&rsquo;s lots of goodies.</p>
+
+<p>In short, Ruby&rsquo;s doing pretty well.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Is Rails Dying?]]></title>
+    <link href="http://blog.trevoke.net/blog/2013/02/02/is-rails-dying/"/>
+    <updated>2013-02-02T17:29:28-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2013/02/02/is-rails-dying</id>
+    <content type="html"><![CDATA[<p>More to the point, should Rails die?</p>
+
+<p>Rails brought a lot of great things &ndash; it made it dumb easy to package an entire app together. It abstracted the complexity of the storage layer. It created an entire market. Things like Heroku, Railsonfire/codeship and other companies turned a profit by extending the benefits of Rails. And things like Capistrano were born.</p>
+
+<p>Everything that can be automated should be automated.</p>
+
+<p>&nbsp;</p>
+
+<p>This has brought great things. And people wrote more tests, and life was good. But then, Rails apps grew, and people realized they had written them badly &ndash; because they interleaved their code within Rails, instead of using Rails as a layer and building their code on top of it, carefully segmenting the access points to that layer. Gosh, that sounds like work! Enter things like Avdi Grimm&rsquo;s Object On Rails. And the Rails community re-learns things that the Java community has suffered through and grown past. Dependency Injection is making a comeback, Ruby-style. People use TDD as an indicator of design smells &ndash; if you have to boot up Rails to run your tests, you&rsquo;re doing something wrong! Although of course SOME tests require the entire Rails stack, but we call these Capybara tests, because &ldquo;end-to-end&rdquo; is ugly, and capybaras are much prettier to look at.</p>
+
+<p>And then, on the other hand, you have Sinatra, and Backbone.js, and other things that are focused on doing one thing and doing it well.</p>
+
+<p>Now we have everything that Rails has taught the Ruby world &ndash; segment your logic, stay away from expensive code (the only currency here is time, and this is a very important thing to realize). Your TDD loop should be very short &ndash; you can watch some of Gary Bernhardt&rsquo;s screencasts on Destroy All Software to learn mor about this. We have Capistrano, and Capybara. We have RSpec. We have Opal, a Ruby-to-Javascript compiler.</p>
+
+<p>And in case Opal is too weird for you, you&rsquo;ve got the Backbone.js world, where you have to make all these exact decisions over again.</p>
+
+<p>You&rsquo;ve got Sinatra, a wonderful &ldquo;controller&rdquo;. Sinatra is a great place to put your API and test it. Because that is the only thing Sinatra gives you, you feel the pain every time you add something &mdash; you have to add it.</p>
+
+<p>And your storage is now distributed. Imagine &hellip; Backbone.js front-end, Sinatra in the middle, and your distributed storage of choice on the other side: Google Drive, Apple Cloud, Dropbox, MediaFire &hellip; You pick it, you store to it. Users now carry their data everywhere. Virtually speaking, of course. Gosh, sounds like you&rsquo;re even reducing costs.</p>
+
+<p>&nbsp;</p>
+
+<p>So now, we face the challenge the health world has been trying to solve for over a decade &ndash; how do you share information between proprietary systems? After all, the user is the one who&rsquo;s suffering.</p>
+
+<p>This is an entirely different blog post &ndash; how much of &ldquo;your&rdquo; data really is yours? How much could be shared? You know.. Like one of those virtual business cards, I suppose. You&rsquo;d have a JSON object behind a secure server where the user stores THEIR information, and you ask for permission to read that one object.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Devise + Rspec Error: Undefined Method 'Name']]></title>
+    <link href="http://blog.trevoke.net/blog/2012/06/11/devise-rspec-error-undefined-method-name/"/>
+    <updated>2012-06-11T10:14:58-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/06/11/devise-rspec-error-undefined-method-name</id>
+    <content type="html"><![CDATA[<p>If you&rsquo;re using Devise and rspec on Rails 3, and you want to override a controller, and you end up with an error that makes no sense whatsoever:</p>
+
+<p><code>Undefined method 'name' for nil:NilClass</code>, well then, you probably want to add the following line to your tests:</p>
+
+<p><code>ruby linenos:false
+@request.env["devise.mapping"] = Devise.mappings[:admin]
+</code>
+Yeah&hellip; That took me way longer than expected.</p>
+
+<p>On a COMPLETELY UNRELATED SIDE NOTE, pry is pretty cool when you end up having to step through code&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using the Monaco Font With Rubymine on Linux]]></title>
+    <link href="http://blog.trevoke.net/blog/2012/04/11/using-the-monaco-font-with-rubymine-on-linux/"/>
+    <updated>2012-04-11T12:36:43-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2012/04/11/using-the-monaco-font-with-rubymine-on-linux</id>
+    <content type="html"><![CDATA[<p>Here are the things you need to know about using any new font for Rubymine:</p>
+
+<ol>
+    <li>It needs to be <strong>Unicode</strong></li>
+    <li>It needs to go into the $JDK_HOME/jre/lib/fonts directory</li>
+</ol>
+
+
+<p>That is absolutely it. The last thing is the Monaco font, which <a href="http://trevoke.net/blog/wp-content/uploads/2012/04/Monaco.ttf_.zip">I have attached</a> for your downloading pleasure. It turns out DejaVu Sans Mono just isn&rsquo;t as nice &mdash; however nice it may be &mdash; and Inconsolata XL doesn&rsquo;t quite do it for me either.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Open Source Is Wide Open: Calling RAKE Tasks]]></title>
+    <link href="http://blog.trevoke.net/blog/2009/12/15/open-source-is-wide-open-calling-rake-tasks/"/>
+    <updated>2009-12-15T14:38:25-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2009/12/15/open-source-is-wide-open-calling-rake-tasks</id>
+    <content type="html"><![CDATA[<p><a href="http://railsblogger.blogspot.com/2009/03/in-queue_15.html">Open source is wide open: Calling RAKE tasks</a>.</p>
+
+<p>Good to know.</p>
+]]></content>
+  </entry>
+  
+</feed>

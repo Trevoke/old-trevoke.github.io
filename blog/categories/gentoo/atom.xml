@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gentoo | Seven Steps]]></title>
+  <link href="http://blog.trevoke.net/blog/categories/gentoo/atom.xml" rel="self"/>
+  <link href="http://blog.trevoke.net/"/>
+  <updated>2014-04-03T16:00:18-04:00</updated>
+  <id>http://blog.trevoke.net/</id>
+  <author>
+    <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Poulsbo + Xorg 1.7 = (Hope You Like Downgrading)]]></title>
+    <link href="http://blog.trevoke.net/blog/2010/05/11/poulsbo-xorg-1-7-hope-you-like-downgrading/"/>
+    <updated>2010-05-11T15:52:46-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2010/05/11/poulsbo-xorg-1-7-hope-you-like-downgrading</id>
+    <content type="html"><![CDATA[<p>If you happen to use Gentoo on a Notebook, you may already know this. If not..</p>
+
+<p>At the time of this writing, If you have a Poulsbo video card (another craptastic Intel invention) do <em>not</em> upgrade to xorg-server 1.7. Stay on 1.6.5-r1 or whatever you have. If you upgrade, xorg will just refuse to work for you, and downgrading is kind of a pain.</p>
+
+<p>If you have upgraded already, then here&rsquo;s what to do:</p>
+
+<p><a href="http://bugs.gentoo.org/show_bug.cgi?id=290679#c4">http://bugs.gentoo.org/show_bug.cgi?id=290679#c4</a></p>
+
+<p>After doing this, you&rsquo;ll need to also mask &gt;xorg-server-1.6.5-r1, then re-install the old xorg-server, and finally re-emerge everything you have installed from the category x11-drivers.</p>
+
+<p>Have fun!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gentoo on a Dell Inspiron Mini 10]]></title>
+    <link href="http://blog.trevoke.net/blog/2010/03/01/gentoo-on-a-dell-inspiron-mini-10/"/>
+    <updated>2010-03-01T11:06:11-05:00</updated>
+    <id>http://blog.trevoke.net/blog/2010/03/01/gentoo-on-a-dell-inspiron-mini-10</id>
+    <content type="html"><![CDATA[<p>There are a few gotchas:
+1) If you have a SSD drive, you need to <em>modprobe pata_sch</em> to see it.
+2) when using GRUB, install it on whatever drive the hard drive is, even if it&rsquo;s /dev/sdc &mdash; and let your FSTAB use /dev/sda. Chances are that /dev/sda is your liveUSB.
+3) In the kernel, in the I2C options, don&rsquo;t let it pick automatically &ndash; instead, select the algorithm options in the menu that appears (I don&rsquo;t know it off-hand, will edit this post later to add the important information). This will allow you to install the kernel driver for the poulsbo card (kmod-psb, I believe).</p>
+
+<p>For the rest, so far, it seems that the howto on the Gentoo wiki is good. I installed e17 very painlessly.</p>
+
+<p>Wireless was a bit trickier.
+I needed to use gentoo-sources-2.6.33, which at the time of this writing was masked as ~x86. A big advantage though is that it has support for the Atom processor (and the proper driver for the broadcom card!).
+Enable the &ldquo;B43&rdquo; driver in the kernel.
+Then, follow the instructions given <a href="http://linuxwireless.org/en/users/Drivers/b43#fw-b43-lp">here</a>:</p>
+
+<blockquote>git clone http://git.bu3sch.de/git/b43-tools.git
+cd b43-tools/fwcutter
+make
+cd ..
+</blockquote>
+
+
+<p>Use version 4.174.64.19 of Broadcom&rsquo;s proprietary driver. (The tarball is mislabeled as &ldquo;4.178.10.4&rdquo;, but it is actually 4.174.64.19.)
+Download and extract the firmware from this driver tarball (Gentoo&rsquo;s installation directory for this is /lib/firmware):</p>
+
+<blockquote>export FIRMWARE_INSTALL_DIR="/lib/firmware"
+wget http://downloads.openwrt.org/sources/broadcom-wl-4.178.10.4.tar.bz2
+tar xjf broadcom-wl-4.178.10.4.tar.bz2
+cd broadcom-wl-4.178.10.4/linux
+sudo ../../fwcutter/b43-fwcutter -w "$FIRMWARE_INSTALL_DIR" wl_apsta.o
+</blockquote>
+
+
+<p>At the time of this writing, although the b43-firmware is available and promises to give us what we need, the b43-fwcutter tool is only at version 12, and not 13, so it can&rsquo;t be used. This is why we need to use <em>git</em> to download the latest version and correctly build the firmware by hand.</p>
+]]></content>
+  </entry>
+  
+</feed>
