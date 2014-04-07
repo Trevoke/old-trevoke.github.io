@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Choosing the right editor for you"
+date: 2014-04-03 18:51:37 -0400
+comments: true
+categories:
+---
+
+# Choosing the right editor
+
+## Intro: My editor history
+Here are my "credentials". You know, establishing why you should be reading this at all.
+
+When it comes to editors, I've honestly fumbled around quite a bit in the past fifteen years or so. I had not encountered an editor until some dude taught my Comp Sci 6/9 class and straight-up went to the GNU webpage and downloaded emacs for Windows. That looked really badass. Unfortunately I had no idea how to use it, so I stuck to whatever C++ IDE I was using for my homework.
+
+After college I worked in IT and played with a lot of Linux distributions. So I got familiar with SCiTe for writing scripts (starting with VBScript and eventually Ruby) and nano for editing config files on Linux VMs.
+
+When I decided I wanted to try and write Real Programs (trademark pending), I tried Eclipse, which I found too unwieldy, Netbeans, which I liked, and then Rubymine, which was awesome.
+
+When I did become a developer, I became quite good at Rubymine because many around me used it. I also decided to get quite good at Vim, because a few around me used it, and in late 2013 I decided to ... Go full-circle and try emacs (though that was not how I thought of it at the time).
+
+So, as you can see, I have been around the block, as they say. Let's take a look at the three main players in my life as a developer, chronologically. There will be an honorable mention for Sublime Text at the end, since I have just started using it and it's, like, the cool kid on the block.
+
+## Rubymine
+I went from Netbeans to Rubymine because I was looking for IDEs that did completion. This was back when Rubymine was around version 2.0, and it has come a very long way since then. Rubymine works very well out of the box. The configuration is fairly well organized, and about 95% of the options are good out of the box. It has options for keymaps which are similar to other standard mappings, and extensive keyboard mappings. The keyboard mappings allow for good control of the editor without a mouse, which allows for quicker editing. There is an output window, and a pretty neat way of handling test result displays, which allows for a pretty good TDD cycle. There is good completion out of the box. The devs are responsive to bug reports and suggestions for improvements. It is also great for navigating code and refactoring. 
+
+Rubymine is a great tool for serious Ruby/Rails developers. It works fantastically well out-of-the-box, and you know what you'll get on any machine on which you run it.
+
+## Vim
+Vim is part of the Linux standard. You'll find it in every Linux distribution. Well, some of them have vi, but if the machine has vi, you're probably looking at a server, and you shouldnt be doing development there anyway. If you do that, you're a bad person and you should feel bad. But I digress.
+
+Vim is everywhere. It has extensive history, and is meant to be navigated with a keyboard. You *can* enable mouse interaction, but it is a bad idea. The keyboard bindings can be found in most terminal apps like more, less or tig. You can even see some of those in the Gmail and Facebook web interface. That's how omnipresent they are.
+
+Vim's main power to you is in the thought process. It is a text editor, and it prides itself in being just that, therefore it took text editing to an extreme. Learning how to think the way Vim wants to work teaches you to start making abstraction of the letters and words you see and start considering things in terms of the modifications you want to make to the text. Vim had a rebirth a few years ago, and a host of plugins came out. As a result, it is very usable for development on many things, such as Ruby, Scala, Haskell, even Android development.
+
+In my mind, Vim will remain the standard text editor. I would recommend everyone learn to use it and learn to use its text objects, even if you do not keep using it.
+
+## Emacs
+Emacs, like Vim, has a way of thinking about things. Unlike vim, though, it doesn't really care about what's in the buffer. Emacs has guidelines. These guidelines apply to any and everything that you can put in an emacs buffer. And you can put just about anything in an emacs buffer. Including a terminal, or random text, like output from your test suite. This is amazingly powerful. I don't really ever have to leave emacs, so once I have the keybindings down, they'll work all the time.
+Like Vim, emacs has plugins for many of the newer languages out there, so it is also a safe option for modern development.
+
+For me, the power of Emacs lies in one's ability to create one's own workflow. This wasn't possible for me until Vim had taught me some discipline.
+
+## Honorable mention: Sublime Text
+Sublime Text is fairly easily configurable and has reasonable documentation. It has a package manager you can install, and a number of fairly good plugins. I haven't figured out how to do a proper TDD workflow, so it doesn't do much for me at the moment. It is however a super-easy starting point, since the keys will do basically what you expect them to do if all you've ever used before were other non-text-editor-ish software.
+
+# Configuring your editor: howto
+This is worth an entirely different blog entry, but the short of it is, use the scientific method. Change the variables one at a time. That means only add one plugin at a time and try using it for a while. If you don't like it, uninstall it. If you like it, keep it. Then wait until you have another need. And go back to square one.
+
+# The thick of the matter: the workflow
+I've touched on workflow before. "Saving keystrokes" is a micro-optimization. The key here is examining the work you do, what steps you need, and how you want to do them.
+
+I have friends who like Rubymine. Some who like Vim. Some who like Emacs.
+It doesn't matter. As long as you get done what you need to get done effectively, and you're using a tool that doesn't get in your way. So, if you are following a strict TDD workflow for instance, you need to do the following:		
+
+1. Write a failing test, presumably in a test file.
+2. Run the failing test, see the failure.
+3. Write some code to make the test pass, presumably in a proper source code file.
+4. Run the failing test, watch it pass.
+5. Refactor the code, which is the most nebulous of all the steps.
+
+As long as you can do all these steps, you've got a TDD workflow. Did I mention you ought to be able to do this several times a minute? If you can go through these steps several times a minute, you've got a TDD workflow. So, examine your workflow. Ready, get set, go! If you don't have such a workflow going (for whatever it is you do, doesn't have to be TDD), my point of view is that it is your responsibility to do what you need to do to have the best workflow possible. As a side bonus, that actually is good practice for you too.
+	
+# Being happy
+This is the final reason to use an editor. It makes you happy. If you're not happy, you should take steps to fix it. Maybe it means fixing a problem with a plugin, or maybe it means changing editors entirely.
