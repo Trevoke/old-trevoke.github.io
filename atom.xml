@@ -4,7 +4,7 @@
   <title><![CDATA[Seven Steps]]></title>
   <link href="http://blog.trevoke.net/atom.xml" rel="self"/>
   <link href="http://blog.trevoke.net/"/>
-  <updated>2014-04-03T16:00:18-04:00</updated>
+  <updated>2014-04-06T23:37:58-04:00</updated>
   <id>http://blog.trevoke.net/</id>
   <author>
     <name><![CDATA[Aldric “Trevoke” Giacomoni]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Choosing the Right Editor for You]]></title>
+    <link href="http://blog.trevoke.net/blog/2014/04/03/choosing-the-right-editor-for-you/"/>
+    <updated>2014-04-03T18:51:37-04:00</updated>
+    <id>http://blog.trevoke.net/blog/2014/04/03/choosing-the-right-editor-for-you</id>
+    <content type="html"><![CDATA[<h1>Choosing the right editor</h1>
+
+<h2>Intro: My editor history</h2>
+
+<p>Here are my &ldquo;credentials&rdquo;. You know, establishing why you should be reading this at all.</p>
+
+<p>When it comes to editors, I&rsquo;ve honestly fumbled around quite a bit in the past fifteen years or so. I had not encountered an editor until some dude taught my Comp Sci 6/9 class and straight-up went to the GNU webpage and downloaded emacs for Windows. That looked really badass. Unfortunately I had no idea how to use it, so I stuck to whatever C++ IDE I was using for my homework.</p>
+
+<p>After college I worked in IT and played with a lot of Linux distributions. So I got familiar with SCiTe for writing scripts (starting with VBScript and eventually Ruby) and nano for editing config files on Linux VMs.</p>
+
+<p>When I decided I wanted to try and write Real Programs (trademark pending), I tried Eclipse, which I found too unwieldy, Netbeans, which I liked, and then Rubymine, which was awesome.</p>
+
+<p>When I did become a developer, I became quite good at Rubymine because many around me used it. I also decided to get quite good at Vim, because a few around me used it, and in late 2013 I decided to &hellip; Go full-circle and try emacs (though that was not how I thought of it at the time).</p>
+
+<p>So, as you can see, I have been around the block, as they say. Let&rsquo;s take a look at the three main players in my life as a developer, chronologically. There will be an honorable mention for Sublime Text at the end, since I have just started using it and it&rsquo;s, like, the cool kid on the block.</p>
+
+<h2>Rubymine</h2>
+
+<p>I went from Netbeans to Rubymine because I was looking for IDEs that did completion. This was back when Rubymine was around version 2.0, and it has come a very long way since then. Rubymine works very well out of the box. The configuration is fairly well organized, and about 95% of the options are good out of the box. It has options for keymaps which are similar to other standard mappings, and extensive keyboard mappings. The keyboard mappings allow for good control of the editor without a mouse, which allows for quicker editing. There is an output window, and a pretty neat way of handling test result displays, which allows for a pretty good TDD cycle. There is good completion out of the box. The devs are responsive to bug reports and suggestions for improvements. It is also great for navigating code and refactoring.</p>
+
+<p>Rubymine is a great tool for serious Ruby/Rails developers. It works fantastically well out-of-the-box, and you know what you&rsquo;ll get on any machine on which you run it.</p>
+
+<h2>Vim</h2>
+
+<p>Vim is part of the Linux standard. You&rsquo;ll find it in every Linux distribution. Well, some of them have vi, but if the machine has vi, you&rsquo;re probably looking at a server, and you shouldnt be doing development there anyway. If you do that, you&rsquo;re a bad person and you should feel bad. But I digress.</p>
+
+<p>Vim is everywhere. It has extensive history, and is meant to be navigated with a keyboard. You <em>can</em> enable mouse interaction, but it is a bad idea. The keyboard bindings can be found in most terminal apps like more, less or tig. You can even see some of those in the Gmail and Facebook web interface. That&rsquo;s how omnipresent they are.</p>
+
+<p>Vim&rsquo;s main power to you is in the thought process. It is a text editor, and it prides itself in being just that, therefore it took text editing to an extreme. Learning how to think the way Vim wants to work teaches you to start making abstraction of the letters and words you see and start considering things in terms of the modifications you want to make to the text. Vim had a rebirth a few years ago, and a host of plugins came out. As a result, it is very usable for development on many things, such as Ruby, Scala, Haskell, even Android development.</p>
+
+<p>In my mind, Vim will remain the standard text editor. I would recommend everyone learn to use it and learn to use its text objects, even if you do not keep using it.</p>
+
+<h2>Emacs</h2>
+
+<p>Emacs, like Vim, has a way of thinking about things. Unlike vim, though, it doesn&rsquo;t really care about what&rsquo;s in the buffer. Emacs has guidelines. These guidelines apply to any and everything that you can put in an emacs buffer. And you can put just about anything in an emacs buffer. Including a terminal, or random text, like output from your test suite. This is amazingly powerful. I don&rsquo;t really ever have to leave emacs, so once I have the keybindings down, they&rsquo;ll work all the time.
+Like Vim, emacs has plugins for many of the newer languages out there, so it is also a safe option for modern development.</p>
+
+<p>For me, the power of Emacs lies in one&rsquo;s ability to create one&rsquo;s own workflow. This wasn&rsquo;t possible for me until Vim had taught me some discipline.</p>
+
+<h2>Honorable mention: Sublime Text</h2>
+
+<p>Sublime Text is fairly easily configurable and has reasonable documentation. It has a package manager you can install, and a number of fairly good plugins. I haven&rsquo;t figured out how to do a proper TDD workflow, so it doesn&rsquo;t do much for me at the moment. It is however a super-easy starting point, since the keys will do basically what you expect them to do if all you&rsquo;ve ever used before were other non-text-editor-ish software.</p>
+
+<h1>Configuring your editor: howto</h1>
+
+<p>This is worth an entirely different blog entry, but the short of it is, use the scientific method. Change the variables one at a time. That means only add one plugin at a time and try using it for a while. If you don&rsquo;t like it, uninstall it. If you like it, keep it. Then wait until you have another need. And go back to square one.</p>
+
+<h1>The thick of the matter: the workflow</h1>
+
+<p>I&rsquo;ve touched on workflow before. &ldquo;Saving keystrokes&rdquo; is a micro-optimization. The key here is examining the work you do, what steps you need, and how you want to do them.</p>
+
+<p>I have friends who like Rubymine. Some who like Vim. Some who like Emacs.
+It doesn&rsquo;t matter. As long as you get done what you need to get done effectively, and you&rsquo;re using a tool that doesn&rsquo;t get in your way. So, if you are following a strict TDD workflow for instance, you need to do the following:</p>
+
+<ol>
+<li>Write a failing test, presumably in a test file.</li>
+<li>Run the failing test, see the failure.</li>
+<li>Write some code to make the test pass, presumably in a proper source code file.</li>
+<li>Run the failing test, watch it pass.</li>
+<li>Refactor the code, which is the most nebulous of all the steps.</li>
+</ol>
+
+
+<p>As long as you can do all these steps, you&rsquo;ve got a TDD workflow. Did I mention you ought to be able to do this several times a minute? If you can go through these steps several times a minute, you&rsquo;ve got a TDD workflow. So, examine your workflow. Ready, get set, go! If you don&rsquo;t have such a workflow going (for whatever it is you do, doesn&rsquo;t have to be TDD), my point of view is that it is your responsibility to do what you need to do to have the best workflow possible. As a side bonus, that actually is good practice for you too.</p>
+
+<h1>Being happy</h1>
+
+<p>This is the final reason to use an editor. It makes you happy. If you&rsquo;re not happy, you should take steps to fix it. Maybe it means fixing a problem with a plugin, or maybe it means changing editors entirely.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Shu Ha Ri and Evolution of a Skill]]></title>
@@ -696,36 +772,6 @@ Like this:</p>
 <p>echo &ldquo;your fancy word finder stuff here&rdquo; | xargs -i bash -c &lsquo;grep -n &ldquo;{}&rdquo; your/file/here&rsquo;</p>
 
 <p>Not something that&rsquo;s useful every day, but when you want it, hot damn is it nice to have.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Git Usage Conventions]]></title>
-    <link href="http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions/"/>
-    <updated>2011-08-30T12:46:12-04:00</updated>
-    <id>http://blog.trevoke.net/blog/2011/08/30/git-usage-conventions</id>
-    <content type="html"><![CDATA[<p>We&rsquo;ve been using git at work for a greenfield project and, so far, this has worked for us. It could be a useful template to get another team started.
-We have gotten rid of the name &lsquo;master&rsquo;, which is only a convention anyway, and instead are using a few permanent branches:</p>
-
-<ul>
-    <li>production (only stable code which gets deployed to production goes there. The only branch to be merged in, EVER, is &#8216;stable&#8217;)</li>
-    <li>stable (only stable code which goes to the staging environment goes there. The only branch to be merged in, EVER, is &#8216;integration&#8217;))</li>
-    <li>integration (code from other branches goes here - tests should, of course, pass before merging in.)</li>
-</ul>
-
-
-<p>And then we have, of course, other branches for work in progress and other stuff. we&rsquo;ve used these prefixes to help with the naming, and called this the &lsquo;buffers&rsquo; convention (look at the first letters &ndash; BFRS):</p>
-
-<ul>
-    <li>bug_</li>
-    <li>feature_</li>
-    <li>refactor_</li>
-    <li>spike_</li>
-</ul>
-
-
-<div>How have you organized your git repositories?</div>
-
 ]]></content>
   </entry>
   

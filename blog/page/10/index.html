@@ -9,7 +9,7 @@
   <meta name="author" content="Aldric “Trevoke” Giacomoni">
 
   
-  <meta name="description" content="Taking the code from this other blog &hellip; It&rsquo;s pretty elegant Ruby! I won&rsquo;t waste your time repeating what the guy wrote in his blog &hellip;">
+  <meta name="description" content="This is actually a lot simpler than I expected (gimme a break, this is my second foray into VBS!) [sourcecode language=&lsquo;vb&rsquo;]Set fs = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,59 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/12/30/recursively-iterate-through-every-filesubfolder-vbscript/">Recursively Iterate Through Every File/subfolder - VBScript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-30T11:13:18-05:00" pubdate data-updated="true">Dec 30<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is actually a lot simpler than I expected (gimme a break, this is my second foray into VBS!)</p>
+
+<p>[sourcecode language=&lsquo;vb&rsquo;]Set fs = WScript.CreateObject (&ldquo;Scripting.FileSystemObject&rdquo;)</p>
+
+<p>Sub ShowSubFolders(Folder)</p>
+
+<pre><code>For Each Subfolder In Folder.SubFolders
+    Set files = SubFolder.Files
+    For Each file In files
+        WScript.Echo file.Name, file.Size
+    Next
+    ShowSubFolders Subfolder
+Next
+</code></pre>
+
+<p>End Sub</p>
+
+<p>ShowSubFolders fs.GetFolder(&ldquo;C:\your\path\here&rdquo;)[/sourcecode]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -443,44 +496,6 @@ Gots to love the Ruby. A lot of potential.. And to think they&rsquo;re revamping
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/11/04/an-old-school-6th-dan/">An Old-school 6th Dan</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-11-04T15:44:55-05:00" pubdate data-updated="true">Nov 4<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Yesterday evening a man who trained about as long as sensei came to train with us. Black obi, rather frayed to white. He&rsquo;d trained a long time under his uncle, and then ~15 years under sensei&rsquo;s sensei. He&rsquo;d taken a break for a while, so he was a bit out of shape, but his mindset, his attitude, his devotion were 100% into everything he did &ndash; an important lesson which I forget all too often.</p>
-
-<p>He left, very happy to have joined us. I hope we&rsquo;ll see him again.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/11/">&larr; Older</a>
@@ -498,6 +513,10 @@ Gots to love the Ruby. A lot of potential.. And to think they&rsquo;re revamping
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/03/choosing-the-right-editor-for-you/">Choosing the Right Editor for You</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
       </li>
     
@@ -511,10 +530,6 @@ Gots to love the Ruby. A lot of potential.. And to think they&rsquo;re revamping
     
       <li class="post">
         <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/15/sparring/">Sparring</a>
       </li>
     
   </ul>

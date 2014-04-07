@@ -9,8 +9,7 @@
   <meta name="author" content="Aldric “Trevoke” Giacomoni">
 
   
-  <meta name="description" content="Someday I&rsquo;ll come out with a proper revision numbering scheme for it.
-I&rsquo;ve implemented some Cucumber testing, the code now actually &hellip;">
+  <meta name="description" content="I feel kinda bad plaintexting this.. You can contact me if you can&rsquo;t figure it out yourself. The service password for the R2 unit is in this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,44 @@ I&rsquo;ve implemented some Cucumber testing, the code now actually &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/14/hologic-r2-service-password/">Hologic R2 Service Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-14T08:33:02-04:00" pubdate data-updated="true">Oct 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I feel kinda bad plaintexting this.. You can contact me if you can&rsquo;t figure it out yourself.</p>
+
+<p>The service password for the R2 unit is in this sentence.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -445,93 +482,6 @@ Something for me to read and digest later when I have time.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/09/11/connecting-to-sybase-with-rails-on-windows-xp/">Connecting to Sybase With Rails on Windows XP</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-09-11T11:05:24-04:00" pubdate data-updated="true">Sep 11<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is known to work on ASE 12.5.1<span style="font-size: x-small;"><span style="font-family: Verdana;"> &ndash; you&rsquo;re welcome to let me know what else worked, I am particularly curious about later versions of Sybase ASE, such as 15.
-</span></span></p>
-
-<p>Prerequisites:</p>
-
-<ol>
-    <li><a title="Sybase PC Client" href="http://trevoke.net/sybase/pcclient_1252.zip">Sybase PC Client 12.52</a></li>
-    <li><a title="Ruby Sybase connection" href="http://trevoke.net/sybase/ruby-sybase-winxp.zip">The Ruby Sybase  files</a></li>
-    <li>gem install activerecord-sybase-adapter -s http://gems.rubyonrails.org</li>
-</ol>
-
-
-<p>Put the Sybase files in C:\ruby\lib\ruby\site_ruby\1.8\i386-msvcrt .</p>
-
-<p>Copy all the DLLs in %SYBASE%\OCS-12_5\dll and put them in %RUBY%\bin (if you are not familiar with Windows notation, this simply means to go where you installed each of Sybase and Ruby and then go to the proper subdirectory). Why all of them? Well, because I&rsquo;m too lazy to know which ones we -do- need.</p>
-
-<p>Set some environment variables, just to make sure Sybase works fine:</p>
-
-<p>Right-click on My Computer, Properties &gt; Advanced &gt; Environment Variables
-If you have full permissions, go ahead and add those as SYSTEM VARIABLES.. Otherwise, well, only for your user (but aren&rsquo;t you doing this on a server?).</p>
-
-<p>SYBASE=c:\sybase    (where you installed Sybase).</p>
-
-<p>JDBC_HOME=c:\sybase\jConnect-6_0   (again, where you installed Sybase, then the subdirectory).</p>
-
-<p>CLASSPATH=%JDBC_HOME%\classes\jconn3.jar (just make sure that&rsquo;s the right number).</p>
-
-<p>If you&rsquo;re going to create a user on your Sybase server for specific Rails usage, it needs to have SELECT permissions on the following : <strong>sysobjects, syscolumns, systypes, syscomments</strong>.</p>
-
-<p>Edit your %SYBASE%\ini\sql.ini and add the information for your server in there.</p>
-
-<p>Next.. In Rails, the magic will look like this in database.yml :</p>
-
-<p>[code lang=&ldquo;ruby&rdquo;]
-production:
-adapter: sybase
-database: &lt;YOUR_DB_HERE&gt;
-username: &lt;USERNAME&gt;
-password: &lt;PASSWORD&gt;
-host: &lt;NAME_GIVEN_IN_SQL_INI_HERE&gt;
-[/code]</p>
-
-<p>And that should be pretty much it!</p>
-
-<p>Don&rsquo;t forget to edit your model if you&rsquo;re working with legacy data:</p>
-
-<p>[code lang=&ldquo;ruby&rdquo;]
-class Patient &lt; ActiveRecord::Base
-set_table_name &quot;some_odd_name&quot;
-set_primary_key &quot;some_primary_key_column&quot;
-end
-[/code]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -549,6 +499,10 @@ end
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/03/choosing-the-right-editor-for-you/">Choosing the Right Editor for You</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
       </li>
     
@@ -562,10 +516,6 @@ end
     
       <li class="post">
         <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/15/sparring/">Sparring</a>
       </li>
     
   </ul>

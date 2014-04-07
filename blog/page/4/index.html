@@ -9,7 +9,7 @@
   <meta name="author" content="Aldric “Trevoke” Giacomoni">
 
   
-  <meta name="description" content="Funny how, when I&rsquo;m busy, I stop updating this blog, isn&rsquo;t it. I&rsquo;m learning a good amount on HTTP, Perl (specifically CGI) and &hellip;">
+  <meta name="description" content="If you happen to use Gentoo on a Notebook, you may already know this. If not.. At the time of this writing, If you have a Poulsbo video card (another &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/05/11/poulsbo-xorg-1-7-hope-you-like-downgrading/">Poulsbo + Xorg 1.7 = (Hope You Like Downgrading)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-05-11T15:52:46-04:00" pubdate data-updated="true">May 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you happen to use Gentoo on a Notebook, you may already know this. If not..</p>
+
+<p>At the time of this writing, If you have a Poulsbo video card (another craptastic Intel invention) do <em>not</em> upgrade to xorg-server 1.7. Stay on 1.6.5-r1 or whatever you have. If you upgrade, xorg will just refuse to work for you, and downgrading is kind of a pain.</p>
+
+<p>If you have upgraded already, then here&rsquo;s what to do:</p>
+
+<p><a href="http://bugs.gentoo.org/show_bug.cgi?id=290679#c4">http://bugs.gentoo.org/show_bug.cgi?id=290679#c4</a></p>
+
+<p>After doing this, you&rsquo;ll need to also mask &gt;xorg-server-1.6.5-r1, then re-install the old xorg-server, and finally re-emerge everything you have installed from the category x11-drivers.</p>
+
+<p>Have fun!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -541,43 +587,6 @@ gem install ListBrowser</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2009/12/31/ruby-sgfparser-now-really-working/">Ruby SgfParser Now Really Working!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-12-31T13:18:51-05:00" pubdate data-updated="true">Dec 31<span>st</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Thanks @alfmikula, it saves properly and has even been gemified. I will soon push it to gemcutter and maybe put a homesite on Rubyforge, not sure.
-It can be found at <a href="http://github.com/Trevoke/SGFParser">http://github.com/Trevoke/SGFParser</a> for now, get the code while it&rsquo;s hot! :&ndash;)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -595,6 +604,10 @@ It can be found at <a href="http://github.com/Trevoke/SGFParser">http://github.c
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/03/choosing-the-right-editor-for-you/">Choosing the Right Editor for You</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
       </li>
     
@@ -608,10 +621,6 @@ It can be found at <a href="http://github.com/Trevoke/SGFParser">http://github.c
     
       <li class="post">
         <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/15/sparring/">Sparring</a>
       </li>
     
   </ul>

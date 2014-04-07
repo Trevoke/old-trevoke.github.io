@@ -9,7 +9,7 @@
   <meta name="author" content="Aldric “Trevoke” Giacomoni">
 
   
-  <meta name="description" content="A friend of mine wrote about shoulder relaxation.. Apparently we both had the same mental block, but he solved it first &ndash; shoulder relaxation ( &hellip;">
+  <meta name="description" content="SFML, the Simple and Fast Multimedia Library, has tutorials for Code::Blocks, plain GCC, Visual Studio, but not Netbeans. Well, I like Netbeans. This &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,69 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/03/08/howto-sfml-with-netbeans/">Howto: SFML With Netbeans</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-08T18:56:24-04:00" pubdate data-updated="true">Mar 8<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.sfml-dev.org/index.php">SFML</a>, the Simple and Fast Multimedia Library, has tutorials for Code::Blocks, plain GCC, Visual Studio, but not Netbeans. Well, I like Netbeans. This tutorial isn&rsquo;t perfect &ndash; the library names are fine for GNU/Linux and not for Windows, refer to the SFML howto for Windows to determine what library names to use. This will show you how to set up a Netbeans project to use SFML.<a id="more"></a><a id="more-80"></a>
+First things first &ndash; as I am running Gentoo on an x86_64 system (AMD64), I compiled the libraries myself. Don&rsquo;t forget to do that if that&rsquo;s your thing &ndash; I spent two evenings wondering why it wasn&rsquo;t working.</p>
+
+<p>First, go to Tools &gt; Options and find the C/C++ heading. If it&rsquo;s not there, you have to first create a C++ project to activate the feature. I have my SFML headers under &lsquo;/home/alg/workspace/SFML-1.4/include &ndash; replace that path with the INCLUDE path of wherever you downloaded the SFML libs. Don&rsquo;t use the &#8216;SFML&rsquo; subdirectory &ndash; use the &lsquo;INCLUDE&rsquo; directory.</p>
+
+<p>[caption id=&ldquo;attachment_81&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;475&rdquo; caption=&ldquo;Tools &gt; Options &gt; Code Assistance &gt; C++ Compiler&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/001.jpg"><img class="size-full wp-image-81" title="Enabling Code Assistance" src="http://trevoke.net/blog/wp-content/uploads/2009/03/001.jpg" alt="Tools &gt; Options &gt; Code Assistance &gt; C++ Compiler" width="475" height="295" /></a>[/caption]</p>
+
+<p>Next, on to the project itself. Right-click on the project in the project list and go to Properties.</p>
+
+<p>[caption id=&ldquo;attachment_82&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;321&rdquo; caption=&ldquo;Right click on project &ndash; go to properties&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/002.jpg"><img class="size-full wp-image-82" title="Project Properties" src="http://trevoke.net/blog/wp-content/uploads/2009/03/002.jpg" alt="Right click on project - go to properties" width="321" height="579" /></a>[/caption]</p>
+
+<p>Now, you need to be aware that there are at least two configurations &ndash; Debug and Release. Unless you want to debug output from SFML, you should change the Configuration to &ldquo;All Configurations&rdquo; so that both testing and release get affected by the following changes, otherwise when you compile the release.. It&rsquo;ll break and you may have forgotten why.</p>
+
+<p>[caption id=&ldquo;attachment_83&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;435&rdquo; caption=&ldquo;Configuration &ndash; All configurations&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/004.jpg"><img class="size-full wp-image-83" title="Configuration  - All Configurations." src="http://trevoke.net/blog/wp-content/uploads/2009/03/004.jpg" alt="Configuration - All configurations" width="435" height="113" /></a>[/caption]</p>
+
+<p>Go to Build &gt; C++ Compiler, and enter/select the SFML include directory in the &lsquo;Include Directories&rsquo; option.</p>
+
+<p>[caption id=&ldquo;attachment_85&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;785&rdquo; caption=&ldquo;Setting the project&#39;s include directories&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/003.jpg"><img class="size-full wp-image-85" title="Project include directories" src="http://trevoke.net/blog/wp-content/uploads/2009/03/003.jpg" alt="Setting the project's include directories" width="785" height="124" /></a>[/caption]</p>
+
+<p>The next and last step is to go to the linker and add the libraries themselves. The button on the right comes in very handy here.</p>
+
+<p>[caption id=&ldquo;attachment_86&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;736&rdquo; caption=&ldquo;On which line do we add it? The one that says Libraries!&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/005a.jpg"><img class="size-full wp-image-86" title="Linker window" src="http://trevoke.net/blog/wp-content/uploads/2009/03/005a.jpg" alt="On which line do we add it? The one that says Libraries!" width="736" height="149" /></a>[/caption]</p>
+
+<p>So, if you click on the three dots, you get the following window. I chose to store the libraries as full paths, it probably doesn&rsquo;t make a huge difference in the context of creating the program &ndash; but maybe in the outside world you just want to have the libraries in the same folder to make your life easier.</p>
+
+<p>[caption id=&ldquo;attachment_87&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;680&rdquo; caption=&ldquo;Adding libraries!&rdquo;]<a href="http://trevoke.net/blog/wp-content/uploads/2009/03/005b.jpg"><img class="size-full wp-image-87" title="Where the libraries are" src="http://trevoke.net/blog/wp-content/uploads/2009/03/005b.jpg" alt="Adding libraries!" width="680" height="130" /></a>[/caption]</p>
+
+<p>This should be all you need to do&hellip; Now you&rsquo;re on your own, all alone with the internet to help you. Happy hacking! Please let me know if anything is incorrect or if you have any additions to make.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -434,59 +497,6 @@ Error-checking is a little spotty, as I really wanted to finish the script at th
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/12/30/recursively-iterate-through-every-filesubfolder-vbscript/">Recursively Iterate Through Every File/subfolder - VBScript</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-12-30T11:13:18-05:00" pubdate data-updated="true">Dec 30<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is actually a lot simpler than I expected (gimme a break, this is my second foray into VBS!)</p>
-
-<p>[sourcecode language=&lsquo;vb&rsquo;]Set fs = WScript.CreateObject (&ldquo;Scripting.FileSystemObject&rdquo;)</p>
-
-<p>Sub ShowSubFolders(Folder)</p>
-
-<pre><code>For Each Subfolder In Folder.SubFolders
-    Set files = SubFolder.Files
-    For Each file In files
-        WScript.Echo file.Name, file.Size
-    Next
-    ShowSubFolders Subfolder
-Next
-</code></pre>
-
-<p>End Sub</p>
-
-<p>ShowSubFolders fs.GetFolder(&ldquo;C:\your\path\here&rdquo;)[/sourcecode]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/10/">&larr; Older</a>
@@ -504,6 +514,10 @@ Next
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/03/choosing-the-right-editor-for-you/">Choosing the Right Editor for You</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
       </li>
     
@@ -517,10 +531,6 @@ Next
     
       <li class="post">
         <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/15/sparring/">Sparring</a>
       </li>
     
   </ul>

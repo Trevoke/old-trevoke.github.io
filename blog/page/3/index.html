@@ -9,10 +9,7 @@
   <meta name="author" content="Aldric “Trevoke” Giacomoni">
 
   
-  <meta name="description" content="So, you can&rsquo;t install gettext?
-Here&rsquo;s a hack to get you past it.
-do your
-$ emerge &mdash;oneshot gettext When it&rsquo;s all unpacked, &hellip;">
+  <meta name="description" content="We&rsquo;ve been using git at work for a greenfield project and, so far, this has worked for us. It could be a useful template to get another team &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +65,63 @@ $ emerge &mdash;oneshot gettext When it&rsquo;s all unpacked, &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/08/30/git-usage-conventions/">Git Usage Conventions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T12:46:12-04:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We&rsquo;ve been using git at work for a greenfield project and, so far, this has worked for us. It could be a useful template to get another team started.
+We have gotten rid of the name &lsquo;master&rsquo;, which is only a convention anyway, and instead are using a few permanent branches:</p>
+
+<ul>
+    <li>production (only stable code which gets deployed to production goes there. The only branch to be merged in, EVER, is &#8216;stable&#8217;)</li>
+    <li>stable (only stable code which goes to the staging environment goes there. The only branch to be merged in, EVER, is &#8216;integration&#8217;))</li>
+    <li>integration (code from other branches goes here - tests should, of course, pass before merging in.)</li>
+</ul>
+
+
+<p>And then we have, of course, other branches for work in progress and other stuff. we&rsquo;ve used these prefixes to help with the naming, and called this the &lsquo;buffers&rsquo; convention (look at the first letters &ndash; BFRS):</p>
+
+<ul>
+    <li>bug_</li>
+    <li>feature_</li>
+    <li>refactor_</li>
+    <li>spike_</li>
+</ul>
+
+
+<div>How have you organized your git repositories?</div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -638,52 +692,6 @@ Some things to note:</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/05/11/poulsbo-xorg-1-7-hope-you-like-downgrading/">Poulsbo + Xorg 1.7 = (Hope You Like Downgrading)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-05-11T15:52:46-04:00" pubdate data-updated="true">May 11<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you happen to use Gentoo on a Notebook, you may already know this. If not..</p>
-
-<p>At the time of this writing, If you have a Poulsbo video card (another craptastic Intel invention) do <em>not</em> upgrade to xorg-server 1.7. Stay on 1.6.5-r1 or whatever you have. If you upgrade, xorg will just refuse to work for you, and downgrading is kind of a pain.</p>
-
-<p>If you have upgraded already, then here&rsquo;s what to do:</p>
-
-<p><a href="http://bugs.gentoo.org/show_bug.cgi?id=290679#c4">http://bugs.gentoo.org/show_bug.cgi?id=290679#c4</a></p>
-
-<p>After doing this, you&rsquo;ll need to also mask &gt;xorg-server-1.6.5-r1, then re-install the old xorg-server, and finally re-emerge everything you have installed from the category x11-drivers.</p>
-
-<p>Have fun!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -701,6 +709,10 @@ Some things to note:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/03/choosing-the-right-editor-for-you/">Choosing the Right Editor for You</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/18/shu-ha-ri-and-evolution-of-a-skill/">Shu Ha Ri and Evolution of a Skill</a>
       </li>
     
@@ -714,10 +726,6 @@ Some things to note:</p>
     
       <li class="post">
         <a href="/blog/2013/11/11/ruby-is-alive-and-well/">Ruby Is Alive and Well</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/15/sparring/">Sparring</a>
       </li>
     
   </ul>
